@@ -13,7 +13,7 @@ export default function AboutSection() {
           
           {/* Left: ABOUT US label */}
           <div className="pl-[100px]">
-            <span className="text-[14px] tracking-[0.15em] uppercase text-[#111] font-medium">
+            <span className="text-[18px] tracking-[0.15em] uppercase text-[#f5efe8] font-medium">
               ABOUT US
             </span>
           </div>

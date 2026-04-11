@@ -10,7 +10,7 @@ const impactItems = [
 
 export default function ImpactSection() {
   return (
-    <section className={`${section} ${sectionBand}`} id="impact">
+    <section className={`${section} ${sectionBand} bg-[#ae1431]`} id="impact">
       {/* top content */}
       <div
         className={`
@@ -48,7 +48,7 @@ export default function ImpactSection() {
 
       rounded-[28px]
 
-      bg-white/70
+      bg-white
 
       backdrop-blur-[2px]
     "
@@ -62,7 +62,7 @@ export default function ImpactSection() {
 
       rounded-[28px]
 
-      bg-white/70
+      bg-[#f5efe8]
 
       backdrop-blur-[2px]
     "
@@ -90,7 +90,7 @@ export default function ImpactSection() {
 
       font-[600]
 
-      text-[#111]
+      text-[#f5efe8]
 
       mb-[18px]
     "
@@ -105,7 +105,7 @@ export default function ImpactSection() {
 
       leading-[1.75]
 
-      text-black
+      text-[#f5efe8]
 
       mb-[14px]
     "
@@ -122,7 +122,7 @@ export default function ImpactSection() {
 
       leading-[1.75]
 
-      text-black
+     text-[#f5efe8]
 
       mb-[28px]
     "
@@ -147,11 +147,12 @@ export default function ImpactSection() {
 
       border
 
-      border-black
+      border-[#f5efe8]
+      
+bg-[#f5efe8]
+      hover:bg-[#f5efe8]
 
-      hover:bg-black
-
-      hover:text-white
+      hover:text-[#ae1431]
 
       transition
     "
@@ -173,7 +174,7 @@ export default function ImpactSection() {
 
             uppercase
 
-            text-black
+            text-[#f5efe8]
 
             mb-[60px]
           "
@@ -227,7 +228,7 @@ export default function ImpactSection() {
 
                   w-[2px]
 
-                  bg-black/25
+                  bg-[#f5efe8]
                 "
               />
 
@@ -238,7 +239,7 @@ export default function ImpactSection() {
 
                   tracking-[0.16em]
 
-                  text-black
+                  text-[#f5efe8]
 
                   mb-[70px]
                 "
@@ -253,7 +254,7 @@ export default function ImpactSection() {
 
                   leading-[1.3]
 
-                  text-[#111]
+                  text-[#f5efe8]
 
                   mt-[50px]
                 "

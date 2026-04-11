@@ -3,7 +3,7 @@ import { section, sectionBand, shell, getRevealClass } from "../../../constants/
 
 export default function ArenaSection() {
   return (
-    <section id="arena" className={`${section} ${sectionBand} bg-[#ededed]`}>
+    <section id="arena" className={`${section} ${sectionBand} bg-[#ae1431]`}>
       <div
         className={`
           ${shell}
@@ -11,7 +11,7 @@ export default function ArenaSection() {
           !max-w-[1580px]
           !w-[calc(100vw-64px)]
 
-          bg-[#f3f3f1]
+          bg-white
 
           rounded-[32px]
 

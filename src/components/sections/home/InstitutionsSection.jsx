@@ -21,7 +21,7 @@ export default function InstitutionsSection() {
   ];
 
   return (
-   <section className="bg-#f5efe8 pt-[40px] pb-[120px]">
+   <section className="bg-[#f5efe8] pt-[40px] pb-[120px]">
       <div className="max-w-[1180px] mx-auto px-[24px]">
         <MarqueeText />
 
@@ -63,7 +63,7 @@ export default function InstitutionsSection() {
     >
 
       {/* image */}
-      <div className="h-[260px] rounded-[18px] bg-[#e9e9e9] flex items-center justify-center">
+      <div className="h-[260px] rounded-[18px] bg-[#f5efe8] flex items-center justify-center">
 
         <svg width="36" height="36" opacity="0.35">
           <rect width="36" height="36" fill="#999"/>

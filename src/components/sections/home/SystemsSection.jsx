@@ -1,6 +1,6 @@
 export default function SystemsSection() {
   return (
-    <section className="bg-#f5efe8 py-[90px] overflow-hidden">
+    <section className="bg-[#f5efe8] py-[90px] overflow-hidden">
       {/* Tabs */}
       <div className="flex justify-center mb-[70px]">
         <div className="flex gap-[120px] border-b-[2px] border-[#e5e5e5]">
@@ -16,7 +16,7 @@ export default function SystemsSection() {
             Operational Excellence
           </div>
 
-          <div className="pb-[18px] text-[18px] font-medium tracking-[0.12em] uppercase text-[#111] border-b-[3px] border-[#111] text-center">
+          <div className="pb-[18px] text-[18px] font-medium tracking-[0.12em] uppercase text-[#ae1431] border-b-[3px] border-[#111] text-center">
             Institutional
             <br />
             Systems & Leadership
@@ -46,7 +46,7 @@ export default function SystemsSection() {
         <div className="overflow-hidden w-[540px]">
           <div className="flex gap-[18px] overflow-x-auto scroll-smooth snap-x snap-mandatory pb-[20px] scrollbar-hide">
             {/* Card 1 */}
-            <div className="rounded-[22px] bg-black p-[34px] flex flex-col justify-between h-[220px] w-[320px] flex-shrink-0 snap-start">
+            <div className="rounded-[22px] bg-[#ae1431] p-[34px] flex flex-col justify-between h-[220px] w-[320px] flex-shrink-0 snap-start">
               <span className="text-[20px] text-[#bfbfbf]">/01</span>
 
               <span className="text-[26px] font-medium text-white leading-[1.2] flex justify-end">

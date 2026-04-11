@@ -9,7 +9,7 @@ export default function ExcellenceSection() {
   return (
     <section
       className="
-        bg-[#f7f7f7]
+        bg-white
 
         py-[120px]
       "
@@ -123,7 +123,7 @@ export default function ExcellenceSection() {
 
                   border-[#cfcfcf]
 
-                  bg-[#e6e6e6]
+                  bg-[#f5efe8]
 
                   flex
 

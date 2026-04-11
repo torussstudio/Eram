@@ -79,7 +79,7 @@ export default function ModelSection() {
           className="
             mt-[70px]
 
-            bg-white
+            bg-[#f5efe8]
 
             rounded-[28px]
 
@@ -117,7 +117,7 @@ export default function ModelSection() {
                 <img
                   src={item.icon}
                   className="
-                    h-[46px]
+                    h-[55px]
 
                     opacity-[0.9]
                   "
@@ -156,7 +156,7 @@ export default function ModelSection() {
 
     font-[400]
 
-    text-black
+    text-[#f5efe8]
   "
 >
   ACADEMIC SYSTEMS & FACULTY DEVELOPMENT
@@ -200,7 +200,7 @@ export default function ModelSection() {
 
           w-[2px]
 
-          bg-[#bdbdbd]
+          bg-[#f5efe8]
         "
       />
 
@@ -214,7 +214,7 @@ export default function ModelSection() {
 
           font-[500]
 
-          text-[#111]
+          text-[#f5efe8]
         "
       >
         /0{i+1}
@@ -228,7 +228,7 @@ export default function ModelSection() {
     mt-[100px]
     text-[26px]
     leading-[1.15]
-    text-[#222]
+    text-[#f5efe8]
   "
   dangerouslySetInnerHTML={{ __html: item }}
 />

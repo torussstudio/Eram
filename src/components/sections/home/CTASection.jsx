@@ -3,7 +3,7 @@ import { section, shell, getRevealClass } from "../../../constants/homeStyles";
 
 export default function CTASection() {
   return (
-    <section className={`${section} pt-[90px] pb-[110px]`}>
+    <section className={`${section} pt-[90px] pb-[110px] bg-[#ae1431]`}>
 
       <div
         className={`
@@ -18,7 +18,7 @@ export default function CTASection() {
 
           text-center
 
-          bg-[#f1f1f1]
+          bg-[#f5efe8]
 
           rounded-[32px]
 
@@ -94,7 +94,7 @@ export default function CTASection() {
 
               rounded-[10px]
 
-              bg-black
+              bg-[#ae1431]
 
               text-white
 
@@ -126,7 +126,7 @@ export default function CTASection() {
 
               text-[#111]
 
-              hover:bg-black
+              hover:bg-[#ae1431]
               hover:text-white
 
               transition

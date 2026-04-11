@@ -10,7 +10,7 @@ const beyondCards = [
 
 export default function BeyondSection() {
   return (
-    <section id="beyond" className={`${section} pt-[90px] pb-[120px]`}>
+    <section id="beyond" className={`${section} pt-[90px] pb-[120px] bg-[#ae1431]`}>
       <div className={`${shell} text-center`}>
         {/* title */}
         <h2
@@ -20,7 +20,7 @@ export default function BeyondSection() {
             leading-[1.2]
             font-[700]
             tracking-[-0.02em]
-            text-[#111]
+            text-[#f5efe8]
             mb-[14px]
           "
         >
@@ -34,7 +34,7 @@ export default function BeyondSection() {
             mx-auto
             text-[14px]
             leading-[1.7]
-            text-[#444]
+            text-[#f5efe8]
             mb-[26px]
           "
         >
@@ -44,8 +44,9 @@ export default function BeyondSection() {
         </p>
 
         {/* button */}
-        <div className="mb-[48px]">
-          <ActionButton variant="secondary">
+        <div className="mb-[48px] ">
+          <ActionButton variant="secondary"
+          className="text-[#f5efe8]">
             Explore Student Pathways
           </ActionButton>
         </div>
@@ -94,7 +95,7 @@ export default function BeyondSection() {
 
             ${
               isPrimary
-                ? "bg-black text-white border-black"
+                ? "bg-[#f5efe8] text-[#ae1431] border-[#f5efe8]"
                 : "bg-transparent text-[#111] border-black/25"
             }
 
@@ -102,7 +103,7 @@ export default function BeyondSection() {
           `}
         >
           {/* number */}
-          <div className="text-[25px] flex justify-start font-thin tracking-[0.16em] font-[700]  opacity-70">
+          <div className="text-[25px] text-black flex justify-start font-thin tracking-[0.16em] font-[700]  opacity-70">
             {card.code}
           </div>
 
@@ -125,7 +126,7 @@ export default function BeyondSection() {
   className="
     mt-[60px]
     border-t-[2px]
-    border-black/20
+    border-[#f5efe8]
     w-[75%]
     mx-auto
   "
