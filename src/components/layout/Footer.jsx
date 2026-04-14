@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="pb-12 pt-[10px]">
       <div
-        className={`${shell} flex items-center justify-between gap-[26px] border-t border-[rgba(17,17,17,0.16)] pt-7 max-[920px]:flex-col max-[920px]:items-stretch`}
+        className={`${shell} flex items-center justify-between gap-[26px] border-t border-[rgba(17,17,17,0.16)] pt-7 max-[920px]:flex-col max-[920px]:items-stretch max-[640px]:pt-5`}
       >
         <div>
           <a className="inline-flex items-center gap-[10px]" href="#hero">
@@ -13,13 +13,13 @@ export default function Footer() {
               ERAM
             </span>
           </a>
-          <p className="mt-4 max-w-[32rem] text-base leading-[1.75] text-[#616161]">
+          <p className="mt-4 max-w-[32rem] text-base leading-[1.75] text-[#616161] max-[640px]:text-[0.92rem]">
             Building disciplined, value-based institutions that expand access to quality learning
             and reach communities that need it most.
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-[18px]">
+        <div className="flex flex-wrap gap-[18px] max-[640px]:gap-x-[14px] max-[640px]:gap-y-[10px]">
           <a className="text-[0.8rem] font-extrabold uppercase tracking-[0.14em] text-[#616161]" href="#about">
             About
           </a>

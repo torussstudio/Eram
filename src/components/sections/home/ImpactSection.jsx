@@ -1,4 +1,3 @@
-import SectionIntro from "../../ui/SectionIntro";
 import { section, sectionBand, shell, getRevealClass } from "../../../constants/homeStyles";
 
 const impactItems = [
@@ -31,13 +30,13 @@ export default function ImpactSection() {
     grid
     grid-cols-[0.85fr_1.15fr]
     ml-[160px]
-
     gap-[26px]
-
     items-end
-
     pt-[10px]
-    
+    max-[1280px]:ml-[60px]
+    max-[1100px]:ml-0
+    max-[640px]:grid-cols-1
+    max-[640px]:justify-items-center
   "
         >
           {/* left small box */}
@@ -51,6 +50,8 @@ export default function ImpactSection() {
       bg-white
 
       backdrop-blur-[2px]
+      max-[640px]:w-full
+      max-[640px]:max-w-[320px]
     "
           />
 
@@ -65,6 +66,8 @@ export default function ImpactSection() {
       bg-[#f5efe8]
 
       backdrop-blur-[2px]
+      max-[640px]:w-full
+      max-[640px]:max-w-[320px]
     "
           />
         </div>
@@ -73,8 +76,9 @@ export default function ImpactSection() {
         <div
           className="
     max-w-[480px]
-
     pt-[25px] pl-[50px]
+    max-[1100px]:pl-0
+    max-[1100px]:pt-[36px]
   "
         >
           {/* title */}
@@ -93,6 +97,7 @@ export default function ImpactSection() {
       text-[#f5efe8]
 
       mb-[18px]
+      max-[640px]:text-[34px]
     "
           >
             In Service Of Society
@@ -125,6 +130,7 @@ export default function ImpactSection() {
      text-[#f5efe8]
 
       mb-[28px]
+      max-[640px]:text-[14px]
     "
           >
             While education remains its core mission, the Trust extends its
@@ -155,6 +161,7 @@ bg-[#f5efe8]
       hover:text-[#ae1431]
 
       transition
+      max-[640px]:w-full
     "
           >
             EXPLORE STUDENT PATHWAYS
@@ -163,7 +170,7 @@ bg-[#f5efe8]
       </div>
 
       {/* divider area */}
-      <div className="mt-[90px]">
+      <div className="mt-[90px] max-[640px]:mt-[64px]">
         <p
           className="
             text-center
@@ -177,6 +184,10 @@ bg-[#f5efe8]
             text-[#f5efe8]
 
             mb-[60px]
+            max-[900px]:text-[24px]
+            max-[640px]:mb-[38px]
+            max-[640px]:text-[18px]
+            max-[640px]:tracking-[0.1em]
           "
         >
           Key Areas Of Impact Include:
@@ -190,8 +201,9 @@ bg-[#f5efe8]
             grid
 
             grid-cols-4
-
+            max-[900px]:gap-y-[28px]
             max-[900px]:grid-cols-2
+            max-[640px]:grid-cols-1
           `}
         >
           {impactItems.map((item, index) => (
@@ -210,6 +222,7 @@ bg-[#f5efe8]
                 flex-col
                 justify-end
 
+                max-[640px]:min-h-[94px]
                 ${getRevealClass(index)}
               `}
             >
@@ -229,6 +242,7 @@ bg-[#f5efe8]
                   w-[2px]
 
                   bg-[#f5efe8]
+                  max-[640px]:h-[160px]
                 "
               />
 
@@ -242,6 +256,8 @@ bg-[#f5efe8]
                   text-[#f5efe8]
 
                   mb-[70px]
+                  max-[640px]:mb-[44px]
+                  max-[640px]:text-[20px]
                 "
               >
                 {item.code}
@@ -257,6 +273,8 @@ bg-[#f5efe8]
                   text-[#f5efe8]
 
                   mt-[50px]
+                  max-[640px]:mt-[28px]
+                  max-[640px]:text-[20px]
                 "
               >
                 {item.title}

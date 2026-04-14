@@ -9,6 +9,7 @@ export default function ModelSection() {
 
         relative
         overflow-hidden
+        max-[900px]:py-[100px]
       "
       id="model"
     >
@@ -27,6 +28,8 @@ export default function ModelSection() {
           bg-[#f5efe8]
 
           opacity-[0.75]
+          max-[640px]:w-[300px]
+          max-[640px]:h-[220px]
         "
         style={{
           clipPath: "polygon(50% 0%, 0% 100%, 100% 100%)",
@@ -35,7 +38,7 @@ export default function ModelSection() {
 
       <div className="max-w-[1180px] mx-auto px-[24px] relative">
         {/* heading block */}
-        <div className="max-w-[640px] ml-auto translate-x-[120px] -translate-y-[40px]">
+        <div className="max-w-[640px] ml-auto translate-x-[120px] -translate-y-[40px] max-[1100px]:translate-x-0 max-[900px]:-translate-y-[20px]">
 
           <h2
             className="
@@ -48,7 +51,9 @@ export default function ModelSection() {
 
               tracking-[-0.02em]
 
-              text-#f5efe8
+              text-[#f5efe8]
+              max-[900px]:text-[42px]
+              max-[640px]:text-[32px]
             "
           >
             The ERAM
@@ -66,6 +71,7 @@ export default function ModelSection() {
               text-black
 
               max-w-[520px]
+              max-[900px]:text-[15px]
             "
           >
             Our academic framework combines a rigorous curriculum and a
@@ -91,6 +97,9 @@ export default function ModelSection() {
 
             gap-[40px]
 
+            max-[900px]:px-[26px]
+            max-[900px]:py-[32px]
+            max-[900px]:gap-[26px]
             max-[900px]:grid-cols-2
             max-[560px]:grid-cols-1
           "
@@ -145,6 +154,7 @@ export default function ModelSection() {
         <div
           className="
             mt-[90px]
+            max-[900px]:mt-[70px]
           "
         >
          <h3
@@ -157,6 +167,7 @@ export default function ModelSection() {
     font-[400]
 
     text-[#f5efe8]
+    max-[900px]:text-[20px]
   "
 >
   ACADEMIC SYSTEMS & FACULTY DEVELOPMENT
@@ -171,6 +182,7 @@ export default function ModelSection() {
 
     gap-[60px]
 
+    max-[900px]:gap-[34px]
     max-[900px]:grid-cols-2
     max-[560px]:grid-cols-1
   "
@@ -185,6 +197,7 @@ export default function ModelSection() {
         relative
 
         pl-[26px]
+        max-[560px]:pl-[18px]
       "
     >
 
@@ -201,6 +214,7 @@ export default function ModelSection() {
           w-[2px]
 
           bg-[#f5efe8]
+          max-[560px]:h-[170px]
         "
       />
 
@@ -215,6 +229,7 @@ export default function ModelSection() {
           font-[500]
 
           text-[#f5efe8]
+          max-[560px]:text-[20px]
         "
       >
         /0{i+1}
@@ -229,6 +244,10 @@ export default function ModelSection() {
     text-[26px]
     leading-[1.15]
     text-[#f5efe8]
+    max-[900px]:mt-[72px]
+    max-[900px]:text-[22px]
+    max-[560px]:mt-[54px]
+    max-[560px]:text-[20px]
   "
   dangerouslySetInnerHTML={{ __html: item }}
 />

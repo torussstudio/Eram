@@ -15,6 +15,7 @@ export default function Hero() {
       pt-[37px]
 
       max-[920px]:pb-[56px]
+      max-[640px]:pt-[24px]
       `}
       id="hero"
     >
@@ -50,11 +51,13 @@ export default function Hero() {
         max-[640px]:pb-[34px]
 
         max-[640px]:pt-[220px]
+        max-[420px]:px-4
+        max-[420px]:pt-[200px]
         "
       >
 
         {/* text container */}
-        <div className="max-w-[1200px] pb-[100px]">
+        <div className="max-w-[1200px] pb-[100px] max-[640px]:pb-[70px]">
 
           {/* heading */}
      <h1
@@ -70,6 +73,7 @@ export default function Hero() {
   tracking-[-0.02em]
 
   text-[#111]
+  max-[640px]:text-[clamp(2.4rem,13vw,3.5rem)]
 "
 >
   An Institutional 
@@ -94,6 +98,7 @@ export default function Hero() {
             text-[#616161]
 
             max-[640px]:max-w-full
+            max-[640px]:text-[0.92rem]
             "
           >
             ERAM Education was established to build disciplined, value-based

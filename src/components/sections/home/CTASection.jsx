@@ -21,10 +21,14 @@ export default function CTASection() {
           bg-[#f5efe8]
 
           rounded-[32px]
+          max-[640px]:rounded-[22px]
 
          pt-[80px] pb-[85px]
+          max-[640px]:pt-[52px]
+          max-[640px]:pb-[56px]
 
           px-[40px]
+          max-[640px]:px-[18px]
 
           max-w-[1040px]
 
@@ -48,6 +52,7 @@ export default function CTASection() {
             text-[#111]
 
             mb-[10px]
+            max-[640px]:text-[31px]
           "
         >
           Begin the Journey.
@@ -62,6 +67,7 @@ export default function CTASection() {
             text-black
 
             mb-[28px]
+            max-[640px]:text-[14px]
           "
         >
           Admissions are now open across our institutions.
@@ -78,6 +84,7 @@ export default function CTASection() {
             flex-wrap
 
             justify-center
+            max-[640px]:w-full
           "
         >
 
@@ -101,6 +108,7 @@ export default function CTASection() {
               hover:opacity-90
 
               transition
+              max-[640px]:w-full
             "
           >
             APPLY NOW
@@ -130,6 +138,7 @@ export default function CTASection() {
               hover:text-white
 
               transition
+              max-[640px]:w-full
             "
           >
             BOOK A CAMPUS VISIT

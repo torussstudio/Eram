@@ -10,16 +10,20 @@ export default function ArenaSection() {
 
           !max-w-[1580px]
           !w-[calc(100vw-64px)]
+          max-[640px]:!w-[calc(100vw-24px)]
 
           bg-white
 
           rounded-[32px]
+          max-[640px]:rounded-[22px]
 
           px-[110px]
           py-[120px]
 
           max-[900px]:px-[28px]
           max-[900px]:py-[80px]
+          max-[640px]:px-[18px]
+          max-[640px]:py-[56px]
 
           relative
           overflow-hidden
@@ -33,6 +37,7 @@ export default function ArenaSection() {
             [grid-template-columns:minmax(0,0.85fr)_minmax(0,1.15fr)]
 
             max-[1000px]:grid-cols-1
+            max-[640px]:gap-[28px]
           "
         >
           {/* LEFT */}
@@ -46,6 +51,7 @@ export default function ArenaSection() {
                 tracking-[-0.02em]
                 text-[#111]
                 mb-[20px]
+                max-[640px]:text-[28px]
               "
             >
               A Destination for
@@ -59,6 +65,8 @@ export default function ArenaSection() {
                 leading-[1.75]
                 text-[#222]
                 mb-[34px]
+                max-[640px]:text-[14px]
+                max-[640px]:mb-[26px]
               "
             >
               The ERAM Sports Arena reflects the Trust's long-term commitment to
@@ -67,7 +75,7 @@ export default function ArenaSection() {
               sports integration.
             </p>
 
-            <div className="flex gap-[14px] flex-wrap">
+            <div className="flex gap-[14px] flex-wrap max-[640px]:gap-[10px]">
               <ActionButton>Explore The Arena</ActionButton>
 
               <ActionButton variant="secondary">
@@ -82,6 +90,8 @@ export default function ArenaSection() {
               ${getRevealClass()}
               relative
               min-h-[520px]
+              max-[1000px]:min-h-[300px]
+              max-[640px]:min-h-[200px]
             `}
           >
             {/* THE ERAM */}
@@ -101,6 +111,13 @@ export default function ArenaSection() {
                 tracking-[-0.045em]
 
                 text-[#111]
+                max-[640px]:left-1/2
+                max-[640px]:-translate-x-1/2
+                max-[640px]:right-auto
+                max-[640px]:bottom-0
+                max-[640px]:text-[clamp(2.1rem,11vw,2.6rem)]
+                max-[640px]:text-center
+                max-[640px]:whitespace-nowrap
               "
             >
               THE ERAM
@@ -136,6 +153,14 @@ export default function ArenaSection() {
     select-none
 
     whitespace-nowrap
+    max-[1000px]:left-[10px]
+    max-[1000px]:bottom-[-30px]
+    max-[1000px]:text-[clamp(4.8rem,15vw,8.2rem)]
+    max-[640px]:left-1/2
+    max-[640px]:-translate-x-1/2
+    max-[640px]:bottom-[-14px]
+    max-[640px]:text-[clamp(2.2rem,14vw,3.6rem)]
+    max-[640px]:[-webkit-text-stroke:1.1px_black]
     
   "
 >

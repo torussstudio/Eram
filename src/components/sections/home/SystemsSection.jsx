@@ -1,94 +1,107 @@
+
 // export default function SystemsSection() {
+//   const tabs = [
+//     "Leadership and Management Structure",
+//     "Infrastructure and Operational Excellence",
+//     "Institutional Systems & Leadership",
+//   ];
+
+//   const cards = [
+//     { n: "01", t: "Strategic Leadership", primary: true },
+//     { n: "02", t: "Structured Academics" },
+//     { n: "03", t: "Operational Excellence" },
+//   ];
+
 //   return (
 //     <section className="bg-[#f5efe8] py-[90px] overflow-hidden">
 //       {/* Tabs */}
-//       <div className="flex justify-center mb-[70px]">
-//         <div className="flex gap-[120px] border-b-[2px] border-[#e5e5e5]">
-//           <div className="pb-[18px] text-[18px] font-medium tracking-[0.12em] uppercase text-[#9a9a9a] border-b-[2px] border-transparent text-center">
-//             Leadership and
-//             <br />
-//             Management Structure
-//           </div>
+//       <div className="flex justify-center mb-[70px] px-[20px]">
+//         <div className="flex gap-[120px] border-b-[2px] border-[#e5e5e5] max-[900px]:gap-[14px] max-[900px]:border-0 max-[900px]:overflow-x-auto max-[900px]:scrollbar-hide">
+//           {tabs.map((item, i) => (
+//   <div
+//     key={i}
+//     className={`
+//     pb-[18px] text-[18px] font-medium tracking-[0.12em] uppercase text-center whitespace-nowrap
+//     max-[900px]:rounded-full max-[900px]:border max-[900px]:px-[16px] max-[900px]:py-[10px] max-[900px]:text-[12px]
 
-//           <div className="pb-[18px] text-[18px] font-medium tracking-[0.12em] uppercase text-[#9a9a9a] border-b-[2px] border-transparent text-center">
-//             Infrastructure and
-//             <br />
-//             Operational Excellence
-//           </div>
-
-//           <div className="pb-[18px] text-[18px] font-medium tracking-[0.12em] uppercase text-[#ae1431] border-b-[3px] border-[#111] text-center">
-//             Institutional
-//             <br />
-//             Systems & Leadership
-//           </div>
+//     ${i === 2
+//       ? "text-[#ae1431] border-[#ae1431] bg-transparent"
+//       : "text-[#777] border-[#ddd] max-[900px]:bg-white"}
+//     `}
+//   >
+//     {item}
+//   </div>
+// ))}
 //         </div>
 //       </div>
 
 //       {/* Content */}
-//       <div className="flex items-start gap-[80px] pl-[325px] pr-[80px]">
-//         {/* Left */}
+//       <div className="flex items-start gap-[80px] pl-[325px] pr-[80px] max-[1280px]:pl-[160px] max-[900px]:flex-col max-[900px]:gap-[35px] max-[900px]:px-[20px]">
+//         {/* text */}
 //         <div className="max-w-[420px]">
-//           <h2 className="text-[42px] font-black text-[#111] leading-[1.1] mb-[24px]">
+//           <h2 className="mb-[24px] text-[42px] font-black leading-[1.1] text-[#111] max-[900px]:text-[28px] max-[900px]:font-semibold">
 //             Systems That
 //             <br />
 //             Sustain Excellence
 //           </h2>
 
-//           <p className="text-[13.5px] text-black leading-[1.8]">
+//           <p className="text-[13.5px] leading-[1.8] text-black max-[900px]:text-[14px]">
 //             An integrated framework of management oversight, faculty excellence,
 //             and purpose-built infrastructure sustaining quality across every
-//             institution, ensuring continuous assessment, teacher development,
-//             institutional monitoring, and transparent processes.
+//             institution.
 //           </p>
 //         </div>
 
-//         {/* Cards */}
-//         <div className="overflow-hidden w-[540px]">
-//           <div className="flex gap-[18px] overflow-x-auto scroll-smooth snap-x snap-mandatory pb-[20px] scrollbar-hide">
-//             {/* Card 1 */}
-//             <div className="rounded-[22px] bg-[#ae1431] p-[34px] flex flex-col justify-between h-[220px] w-[320px] flex-shrink-0 snap-start">
-//               <span className="text-[20px] text-[#bfbfbf]">/01</span>
+//         {/* cards */}
+//         <div className="w-[540px] overflow-hidden max-[900px]:w-full">
+//           <div className="flex snap-x snap-mandatory gap-[18px] overflow-x-auto scroll-smooth pb-[20px] scrollbar-hide max-[900px]:gap-[14px]">
+//             {cards.map((card, i) => (
+//               <div
+//                 key={i}
+//                 className={`
+//                 flex h-[220px] w-[320px] flex-shrink-0 snap-start flex-col justify-between rounded-[22px] p-[34px]
+//                 max-[900px]:h-[190px] max-[900px]:w-[260px] max-[900px]:p-[24px]
+//                 ${card.primary
+//                   ? "bg-[#ae1431]"
+//                   : "bg-white border border-[#e2e2e2]"}
+//                 `}
+//               >
+//                 <span
+//                   className={`
+//                   ${card.primary
+//                     ? "text-[#bfbfbf]"
+//                     : "text-[#999]"}
+//                   `}
+//                 >
+//                   /{card.n}
+//                 </span>
 
-//               <span className="text-[26px] font-medium text-white leading-[1.2] flex justify-end">
-//                 Strategic
-//                 <br />
-//                 Leadership
-//               </span>
-//             </div>
-
-//             {/* Card 2 */}
-//             <div className="rounded-[22px] bg-white border border-[#e2e2e2] p-[34px] flex flex-col justify-between h-[220px] w-[320px] flex-shrink-0 snap-start">
-//               <span className="text-[20px] text-[#999]">/02</span>
-
-//               <span className="text-[26px] font-medium text-[#111] leading-[1.2] flex justify-end">
-//                 Structured
-//                 <br />
-//                 Academics
-//               </span>
-//             </div>
-
-//             {/* Card 3 */}
-//             <div className="rounded-[22px] bg-white border border-[#e2e2e2] p-[34px] flex flex-col justify-between h-[220px] w-[320px] flex-shrink-0 snap-start">
-//               <span className="text-[20px] text-[#999]">/03</span>
-
-//               <span className="text-[26px] font-medium text-[#111] leading-[1.2] flex justify-end">
-//                 Operational
-//                 <br />
-//                 Excellence
-//               </span>
-//             </div>
+//                 <span
+//                   className={`
+//                   flex justify-end text-[26px] font-medium leading-[1.2] max-[900px]:text-[20px]
+//                   ${card.primary
+//                     ? "text-white"
+//                     : "text-[#111]"}
+//                   `}
+//                 >
+//                   {card.t.split(" ").map((w, idx) => (
+//                     <span key={idx}>
+//                       {w}
+//                       <br />
+//                     </span>
+//                   ))}
+//                 </span>
+//               </div>
+//             ))}
 //           </div>
 //         </div>
 //       </div>
 
-//       {/* Button */}
-//       <div className="flex justify-center mt-[70px]">
+//       {/* button */}
+//       <div className="mt-[70px] flex justify-center px-[20px]">
 //         <button
-//           className=" text-[#111] text-[12px] font-[500] tracking-[0.16em] uppercase px-[36px] py-[14px] border border-[#cfcfcf] rounded-[10px]
-//     transition-all
-//     duration-300
-//     ease-out
-//  hover:bg-black hover:text-white hover:border-black" >
+//           className="rounded-[10px] border border-[#cfcfcf] px-[36px] py-[14px] text-[12px] font-[500] uppercase tracking-[0.16em] text-[#111] transition-all duration-300 hover:border-black hover:bg-black hover:text-white max-[900px]:w-full max-[900px]:py-[16px]"
+//         >
 //           EXPLORE OUR SYSTEMS & STANDARDS
 //         </button>
 //       </div>
@@ -96,67 +109,125 @@
 //   );
 // }
 
-
+import { useState } from "react";
 
 export default function SystemsSection() {
+
+  const [activeTab, setActiveTab] = useState(0);
+  const [activeCard, setActiveCard] = useState(0);
+
+
+  const tabs = [
+    "Leadership and Management Structure",
+    "Infrastructure and Operational Excellence",
+    "Institutional Systems & Leadership",
+  ];
+
+
+  const cardsData = [
+
+    [
+      { n: "01", t: "Strategic Leadership" },
+      { n: "02", t: "Governance Model" },
+      { n: "03", t: "Organizational Clarity" },
+    ],
+
+    [
+      { n: "01", t: "Campus Facilities" },
+      { n: "02", t: "Digital Systems" },
+      { n: "03", t: "Operational Flow" },
+    ],
+
+    [
+      { n: "01", t: "Strategic Leadership" },
+      { n: "02", t: "Structured Academics" },
+      { n: "03", t: "Operational Excellence" },
+    ],
+
+  ];
+
+
+  const cards = cardsData[activeTab];
+
+
+
   return (
     <section className="bg-[#f5efe8] py-[90px] overflow-hidden">
+
 
       {/* Tabs */}
       <div className="flex justify-center mb-[70px] px-[20px]">
 
-        <div className="
-        flex gap-[120px]
+        <div
+          className="
+          flex
+          gap-[120px]
 
-        border-b-[2px] border-[#e5e5e5]
+          border-b-[2px]
+          border-[#e5e5e5]
 
-        max-[900px]:
-        gap-[14px]
-        border-0
-        overflow-x-auto
-        scrollbar-hide
-        ">
+          max-[900px]:gap-[14px]
+          max-[900px]:border-0
 
-          {[
-            "Leadership and Management Structure",
-            "Infrastructure and Operational Excellence",
-            "Institutional Systems & Leadership"
-          ].map((item,i)=>(
-            
-            <div
+          max-[900px]:overflow-x-auto
+          max-[900px]:scrollbar-hide
+          "
+        >
+
+          {tabs.map((item, i) => (
+
+            <button
               key={i}
 
-              className={`
+              onClick={() => {
+                setActiveTab(i);
+                setActiveCard(0);
+              }}
+
+              className="
               pb-[18px]
 
               text-[18px]
-
               font-medium
 
               tracking-[0.12em]
-
               uppercase
-
-              text-center
 
               whitespace-nowrap
 
-              max-[900px]:
-              text-[12px]
-              px-[16px]
-              py-[10px]
-              rounded-full
-              border
+              transition-all
+              duration-300
 
-              ${i===2
-                ? "text-[#ae1431] border-[#ae1431] bg-white"
-                : "text-[#777] border-[#ddd] bg-white"}
-              `}
+              max-[900px]:rounded-full
+              max-[900px]:border
+
+              max-[900px]:px-[16px]
+              max-[900px]:py-[10px]
+
+              max-[900px]:text-[12px]
+              "
+
+              style={{
+
+                color:
+                  activeTab === i
+                    ? "#ae1431"
+                    : "#777",
+
+                borderColor:
+                  activeTab === i
+                    ? "#ae1431"
+                    : "#ddd",
+
+                background:
+                  "transparent"
+
+              }}
             >
 
               {item}
 
-            </div>
+            </button>
 
           ))}
 
@@ -166,50 +237,70 @@ export default function SystemsSection() {
 
 
 
+
       {/* Content */}
-      <div className="
-      flex
+      <div
+        className="
+        flex
+        items-start
 
-      items-start
+        gap-[80px]
 
-      gap-[80px]
+        pl-[325px]
+        pr-[80px]
 
-      pl-[325px]
-      pr-[80px]
+        max-[1280px]:pl-[160px]
 
-      max-[1280px]:pl-[160px]
+        max-[900px]:flex-col
+        max-[900px]:gap-[35px]
 
-      max-[900px]:
-      flex-col
-      pl-[20px]
-      pr-[20px]
-      gap-[35px]
-      ">
+        max-[900px]:px-[20px]
+        "
+      >
 
 
         {/* text */}
         <div className="max-w-[420px]">
 
-          <h2 className="text-[42px] font-black text-[#111] leading-[1.1] mb-[24px]
+          <h2
+            className="
+            mb-[24px]
 
-          max-[900px]:
-          text-[28px]
-          font-semibold">
+            text-[42px]
+            font-black
+
+            leading-[1.1]
+
+            text-[#111]
+
+            max-[900px]:text-[28px]
+            max-[900px]:font-semibold
+            "
+          >
 
             Systems That
             <br />
+
             Sustain Excellence
 
           </h2>
 
-          <p className="text-[13.5px] text-black leading-[1.8]
 
-          max-[900px]:
-          text-[14px]">
+          <p
+            className="
+            text-[13.5px]
 
-            An integrated framework of management oversight, faculty excellence,
-            and purpose-built infrastructure sustaining quality across every
-            institution.
+            leading-[1.8]
+
+            text-black
+
+            max-[900px]:text-[14px]
+            "
+          >
+
+            An integrated framework of management oversight,
+            faculty excellence, and purpose-built infrastructure
+            sustaining quality across every institution.
 
           </p>
 
@@ -217,135 +308,154 @@ export default function SystemsSection() {
 
 
 
+
         {/* cards */}
-        <div className="
-        overflow-hidden
-
-        w-[540px]
-
-        max-[900px]:
-        w-full
-        ">
-
-          <div className="
-          flex
-
-          gap-[18px]
-
-          overflow-x-auto
-
-          scroll-smooth
-
-          snap-x snap-mandatory
-
-          pb-[20px]
-
-          scrollbar-hide
-
-          max-[900px]:
-          gap-[14px]
-          ">
-
-            {[
-              {
-                n:"01",
-                t:"Strategic Leadership",
-                primary:true
-              },
-              {
-                n:"02",
-                t:"Structured Academics"
-              },
-              {
-                n:"03",
-                t:"Operational Excellence"
-              }
-            ].map((card,i)=>(
-              
-              <div
-                key={i}
-
-                className={`
-                rounded-[22px]
-
-                p-[34px]
-
-                flex
-
-                flex-col
-
-                justify-between
-
-                flex-shrink-0
-
-                snap-start
-
-                h-[220px]
-
-                w-[320px]
-
-                max-[900px]:
-                w-[260px]
-                h-[190px]
-                p-[24px]
-
-                ${card.primary
-                  ? "bg-[#ae1431]"
-                  : "bg-white border border-[#e2e2e2]"}
-                `}
-              >
-
-                <span
-                  className={`
-                  text-[18px]
-
-                  ${card.primary
-                    ? "text-[#bfbfbf]"
-                    : "text-[#999]"}
-                  `}
-                >
-
-                  /{card.n}
-
-                </span>
+        <div className="w-[540px] overflow-hidden max-[900px]:w-full">
 
 
+          <div
+            className="
+            flex
 
-                <span
-                  className={`
-                  text-[26px]
+            snap-x
+            snap-mandatory
 
-                  font-medium
+            gap-[18px]
 
-                  leading-[1.2]
+            overflow-x-auto
+
+            scroll-smooth
+
+            pb-[20px]
+
+            scrollbar-hide
+
+            max-[900px]:gap-[14px]
+            "
+          >
+
+
+            {cards.map((card, i) => {
+
+              const isActive = activeCard === i;
+
+              return (
+
+                <div
+                  key={i}
+
+                  onClick={() => setActiveCard(i)}
+
+                  className="
+                  cursor-pointer
 
                   flex
 
-                  justify-end
+                  h-[220px]
+                  w-[320px]
 
-                  max-[900px]:
-                  text-[20px]
+                  flex-shrink-0
 
-                  ${card.primary
-                    ? "text-white"
-                    : "text-[#111]"}
-                  `}
+                  snap-start
+
+                  flex-col
+                  justify-between
+
+                  rounded-[22px]
+
+                  p-[34px]
+
+                  transition-all
+                  duration-300
+
+                  max-[900px]:h-[190px]
+                  max-[900px]:w-[260px]
+
+                  max-[900px]:p-[24px]
+                  "
+
+                  style={{
+
+                    background:
+                      isActive
+                        ? "#ae1431"
+                        : "white",
+
+                    border:
+                      isActive
+                        ? "none"
+                        : "1px solid #e2e2e2"
+
+                  }}
                 >
 
-                  {card.t.split(" ").map((w,i)=>(
-                    <span key={i}>
-                      {w}
-                      <br/>
-                    </span>
-                  ))}
 
-                </span>
+                  <span
+                    style={{
 
-              </div>
+                      color:
+                        isActive
+                          ? "#bfbfbf"
+                          : "#999"
 
-            ))}
+                    }}
+                  >
+
+                    /{card.n}
+
+                  </span>
+
+
+
+                  <span
+                    className="
+                    flex
+                    justify-end
+
+                    text-[26px]
+
+                    font-medium
+
+                    leading-[1.2]
+
+                    max-[900px]:text-[20px]
+                    "
+
+                    style={{
+
+                      color:
+                        isActive
+                          ? "white"
+                          : "#111"
+
+                    }}
+                  >
+
+                    {card.t
+                      .split(" ")
+                      .map((w, idx) => (
+
+                        <span key={idx}>
+
+                          {w}
+                          <br />
+
+                        </span>
+
+                      ))}
+
+                  </span>
+
+
+                </div>
+
+              );
+
+            })}
+
 
           </div>
+
 
         </div>
 
@@ -353,45 +463,40 @@ export default function SystemsSection() {
 
 
 
+
       {/* button */}
-      <div className="
-      flex justify-center
-
-      mt-[70px]
-
-      px-[20px]
-      ">
+      <div className="mt-[70px] flex justify-center px-[20px]">
 
         <button
           className="
+          rounded-[10px]
 
-          text-[#111]
+          border
+          border-[#cfcfcf]
+
+          px-[36px]
+          py-[14px]
 
           text-[12px]
 
           font-[500]
 
-          tracking-[0.16em]
-
           uppercase
 
-          px-[36px]
+          tracking-[0.16em]
 
-          py-[14px]
+          text-[#111]
 
-          border border-[#cfcfcf]
+          transition-all
+          duration-300
 
-          rounded-[10px]
-
-          transition-all duration-300
-
+          hover:border-black
           hover:bg-black
           hover:text-white
-          hover:border-black
 
-          max-[900px]:
-          w-full
-          py-[16px]
+          max-[900px]:w-full
+
+          max-[900px]:py-[16px]
           "
         >
 
@@ -401,6 +506,8 @@ export default function SystemsSection() {
 
       </div>
 
+
     </section>
-  )
+  );
+
 }

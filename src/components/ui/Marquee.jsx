@@ -23,7 +23,7 @@ export default function MarqueeText() {
 
   return (
 
-    <div className="relative left-1/2 right-1/2 w-screen -translate-x-1/2 overflow-hidden border-y-[2px] border-black py-[16px] mb-[70px]">
+    <div className="relative left-1/2 right-1/2 mb-[70px] w-screen -translate-x-1/2 overflow-hidden border-y-[2px] border-black py-[16px] max-[640px]:mb-[44px] max-[640px]:py-[12px]">
 
       <div
         ref={ref}
@@ -32,16 +32,13 @@ export default function MarqueeText() {
 
         {items.map((_, i) => (
 
-          <div
-            key={i}
-            className="flex items-center gap-[40px] pr-[40px]"
-          >
+          <div key={i} className="flex items-center gap-[40px] pr-[40px] max-[640px]:gap-[18px] max-[640px]:pr-[18px]">
 
-            <span className="text-[25px] tracking-[0.22em] text-black">
+            <span className="text-[25px] tracking-[0.22em] text-black max-[640px]:text-[14px] max-[640px]:tracking-[0.12em]">
               {text}
             </span>
 
-            <div className="h-[18px] w-[1px] bg-black flex-shrink-0" />
+            <div className="h-[18px] w-[1px] flex-shrink-0 bg-black max-[640px]:h-[12px]" />
 
           </div>
 

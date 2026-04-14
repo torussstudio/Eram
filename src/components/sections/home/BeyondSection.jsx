@@ -1,3 +1,84 @@
+// import ActionButton from "../../ui/ActionButton";
+// import { section, shell, getRevealClass } from "../../../constants/homeStyles";
+
+// const beyondCards = [
+//   { code: "/01", title: "STEM CLUBS" },
+//   { code: "/02", title: "JCI & ROTARY" },
+//   { code: "/03", title: "TRAINING SESSIONS" },
+//   { code: "/04", title: "ACTIVITY" },
+// ];
+
+// export default function BeyondSection() {
+//   return (
+//     <section id="beyond" className={`${section} pt-[90px] pb-[120px] bg-[#ae1431]`}>
+//       <div className={`${shell} text-center`}>
+//         {/* title */}
+//         <h2
+//           className="mb-[14px] font-display text-[36px] font-[700] leading-[1.2] tracking-[-0.02em] text-[#f5efe8] max-[640px]:text-[28px]"
+//         >
+//            BEYOND THE CLASSROOM
+//         </h2>
+
+//         {/* description */}
+//         <p
+//           className="mx-auto mb-[26px] max-w-[560px] text-[14px] leading-[1.7] text-[#f5efe8] max-[640px]:text-[13px]"
+//         >
+//           Clubs, leadership forums, residential programs, state-level
+//           participation, curated experiences, learning that extends beyond
+//           textbooks.
+//         </p>
+
+//         {/* button */}
+//         <div className="mb-[48px] max-[640px]:mb-[34px]">
+//           <ActionButton variant="secondary" className="text-[#f5efe8] max-[640px]:!w-auto">
+//             Explore Student Pathways
+//           </ActionButton>
+//         </div>
+
+//         {/* horizontal scroll cards */}
+//         {/* cards */}
+//         <div className="mx-auto mt-[48px] w-[75%] overflow-hidden max-[1100px]:w-[88%] max-[640px]:mt-[34px] max-[640px]:w-full">
+//           <div className="flex snap-x snap-mandatory gap-[22px] overflow-x-auto pb-[16px] scrollbar-hide max-[640px]:gap-[12px]">
+//             {beyondCards.map((card, index) => {
+//               const isPrimary = card.code === "/01";
+
+//               return (
+//                 <div
+//                   key={card.title}
+//                   className={`
+//                     flex h-[225px] w-[350px] flex-none snap-start flex-col justify-between rounded-[22px] border px-[30px] py-[28px]
+//                     max-[640px]:h-[185px] max-[640px]:w-[260px] max-[640px]:rounded-[18px] max-[640px]:px-[20px] max-[640px]:py-[18px]
+//                     ${
+//                       isPrimary
+//                         ? "border-[#f5efe8] bg-[#f5efe8] text-[#ae1431]"
+//                         : "border-black/25 bg-transparent text-[#111]"
+//                     }
+//                     ${getRevealClass(index)}
+//                   `}
+//                 >
+//                   {/* number */}
+//                   <div className="flex justify-start text-[25px] font-[700] tracking-[0.16em] text-black opacity-70 max-[640px]:text-[19px]">
+//                     {card.code}
+//                   </div>
+
+//                   <div className="flex justify-end text-center text-[23px] font-[500] tracking-[0.01em] max-[640px]:text-[18px]">
+//                     {card.title}
+//                   </div>
+//                 </div>
+//               );
+//             })}
+//           </div>
+//         </div>
+
+//         {/* divider */}
+//         <div className="mx-auto mt-[60px] w-[75%] border-t-[2px] border-[#f5efe8] max-[1100px]:w-[88%] max-[640px]:mt-[40px] max-[640px]:w-full" />
+//       </div>
+//     </section>
+//   );
+// }
+
+
+import { useState } from "react";
 import ActionButton from "../../ui/ActionButton";
 import { section, shell, getRevealClass } from "../../../constants/homeStyles";
 
@@ -9,129 +90,274 @@ const beyondCards = [
 ];
 
 export default function BeyondSection() {
+
+  const [activeCard, setActiveCard] = useState(0);
+
   return (
-    <section id="beyond" className={`${section} pt-[90px] pb-[120px] bg-[#ae1431]`}>
+    <section
+      id="beyond"
+      className={`${section} pt-[90px] pb-[120px] bg-[#ae1431]`}
+    >
+
       <div className={`${shell} text-center`}>
+
+
         {/* title */}
         <h2
           className="
-            font-display
-            text-[36px]
-            leading-[1.2]
-            font-[700]
-            tracking-[-0.02em]
-            text-[#f5efe8]
-            mb-[14px]
+          mb-[14px]
+
+          font-display
+
+          text-[36px]
+          font-[700]
+
+          leading-[1.2]
+
+          tracking-[-0.02em]
+
+          text-[#f5efe8]
+
+          max-[640px]:text-[28px]
           "
         >
-           BEYOND THE CLASSROOM
+
+          BEYOND THE CLASSROOM
+
         </h2>
+
+
 
         {/* description */}
         <p
           className="
-            max-w-[560px]
-            mx-auto
-            text-[14px]
-            leading-[1.7]
-            text-[#f5efe8]
-            mb-[26px]
+          mx-auto
+
+          mb-[26px]
+
+          max-w-[560px]
+
+          text-[14px]
+
+          leading-[1.7]
+
+          text-[#f5efe8]
+
+          max-[640px]:text-[13px]
           "
         >
-          Clubs, leadership forums, residential programs, state-level
-          participation, curated experiences, learning that extends beyond
-          textbooks.
+
+          Clubs, leadership forums, residential programs,
+          state-level participation, curated experiences,
+          learning that extends beyond textbooks.
+
         </p>
 
+
+
         {/* button */}
-        <div className="mb-[48px] ">
-          <ActionButton variant="secondary"
-          className="text-[#f5efe8]">
+        <div className="mb-[48px] max-[640px]:mb-[34px]">
+
+          <ActionButton
+            variant="secondary"
+            className="text-[#f5efe8] max-[640px]:!w-auto"
+          >
+
             Explore Student Pathways
+
           </ActionButton>
+
         </div>
 
-        {/* horizontal scroll cards */}
- {/* cards */}
-<div className="mt-[48px] w-[75%] mx-auto overflow-hidden">
 
-  <div
-    className="
-      flex
-      gap-[22px]
 
-      overflow-x-auto
-      scrollbar-hide
-
-      pb-[16px]
-
-      snap-x snap-mandatory
-    "
-  >
-
-    {beyondCards.map((card, index) => {
-
-      const isPrimary = card.code === "/01";
-
-      return (
+        {/* cards */}
         <div
-          key={card.title}
-          className={`
-            flex-none
+          className="
+          mx-auto
 
-            w-[350px]
-            h-[225px]
+          mt-[48px]
 
-            rounded-[22px]
+          w-[75%]
 
-            px-[30px]
-            py-[28px]
+          overflow-hidden
 
-            flex flex-col justify-between
+          max-[1100px]:w-[88%]
 
-            border
-
-            snap-start
-
-            ${
-              isPrimary
-                ? "bg-[#f5efe8] text-[#ae1431] border-[#f5efe8]"
-                : "bg-transparent text-[#111] border-black/25"
-            }
-
-            ${getRevealClass(index)}
-          `}
+          max-[640px]:mt-[34px]
+          max-[640px]:w-full
+          "
         >
-          {/* number */}
-          <div className="text-[25px] text-black flex justify-start font-thin tracking-[0.16em] font-[700]  opacity-70">
-            {card.code}
-          </div>
 
-          <div className="text-[23px] flex justify-end font-thin tracking-[0.01em] font-[500] text-center">
-            {card.title}
+          <div
+            className="
+            flex
+
+            snap-x
+            snap-mandatory
+
+            gap-[22px]
+
+            overflow-x-auto
+
+            pb-[16px]
+
+            scrollbar-hide
+
+            max-[640px]:gap-[12px]
+            "
+          >
+
+            {beyondCards.map((card, index) => {
+
+              const isActive = activeCard === index;
+
+              return (
+
+                <div
+                  key={card.title}
+
+                  onClick={() => setActiveCard(index)}
+
+                  className={`
+                  cursor-pointer
+
+                  flex
+
+                  h-[225px]
+                  w-[350px]
+
+                  flex-none
+
+                  snap-start
+
+                  flex-col
+                  justify-between
+
+                  rounded-[22px]
+
+                  border
+
+                  px-[30px]
+                  py-[28px]
+
+                  transition-all
+                  duration-300
+
+                  max-[640px]:h-[185px]
+                  max-[640px]:w-[260px]
+
+                  max-[640px]:rounded-[18px]
+
+                  max-[640px]:px-[20px]
+                  max-[640px]:py-[18px]
+
+                  ${
+                    isActive
+                      ? "border-[#f5efe8] bg-[#f5efe8] text-[#ae1431]"
+                      : "border-black/25 bg-transparent text-[#111]"
+                  }
+
+                  ${getRevealClass(index)}
+                  `}
+                >
+
+
+                  {/* number */}
+                  <div
+                    className="
+                    flex
+
+                    justify-start
+
+                    text-[25px]
+
+                    font-[700]
+
+                    tracking-[0.16em]
+
+                    opacity-70
+
+                    max-[640px]:text-[19px]
+                    "
+                    style={{
+                      color: isActive
+                        ? "#ae1431"
+                        : "#f5efe8"
+                    }}
+                  >
+
+                    {card.code}
+
+                  </div>
+
+
+
+                  {/* title */}
+                  <div
+                    className="
+                    flex
+
+                    justify-end
+
+                    text-center
+
+                    text-[23px]
+
+                    font-[500]
+
+                    tracking-[0.01em]
+
+                    max-[640px]:text-[18px]
+                    "
+                    style={{
+                      color: isActive
+                        ? "#ae1431"
+                        : "#f5efe8"
+                    }}
+                  >
+
+                    {card.title}
+
+                  </div>
+
+
+                </div>
+
+              );
+
+            })}
+
           </div>
 
         </div>
 
-      );
 
-    })}
-
-  </div>
-
-</div>
 
         {/* divider */}
-<div
-  className="
-    mt-[60px]
-    border-t-[2px]
-    border-[#f5efe8]
-    w-[75%]
-    mx-auto
-  "
-/>
+        <div
+          className="
+          mx-auto
+
+          mt-[60px]
+
+          w-[75%]
+
+          border-t-[2px]
+
+          border-[#f5efe8]
+
+          max-[1100px]:w-[88%]
+
+          max-[640px]:mt-[40px]
+          max-[640px]:w-full
+          "
+        />
+
+
       </div>
+
     </section>
   );
+
 }
