@@ -1,22 +1,15 @@
-
-
 import { useState } from "react";
 
 export default function SystemsSection() {
-
   const [activeTab, setActiveTab] = useState(0);
   const [activeCard, setActiveCard] = useState(0);
 
-
   const tabs = [
-    "Leadership and Management Structure",
-    "Infrastructure and Operational Excellence",
-    "Institutional Systems & Leadership",
+    "LEADERSHIP AND\nMANAGEMENT STRUCTURE",
+    "INFRASTRUCTURE AND\nOPERATIONAL EXCELLENCE",
+    "INSTITUTIONAL\nSYSTEMS & LEADERSHIP",
   ];
-
-
   const cardsData = [
-
     [
       { n: "01", t: "Strategic Leadership" },
       { n: "02", t: "Governance Model" },
@@ -34,28 +27,23 @@ export default function SystemsSection() {
       { n: "02", t: "Structured Academics" },
       { n: "03", t: "Operational Excellence" },
     ],
-
   ];
-
 
   const cards = cardsData[activeTab];
 
-
-
   return (
     <section className="bg-[#f5efe8] py-[90px] overflow-hidden">
-
-
       {/* Tabs */}
       <div className="flex justify-center mb-[70px] px-[20px]">
-
         <div
           className="
-          flex
-          gap-[120px]
+           relative
 
-          border-b-[2px]
-          border-[#e5e5e5]
+  flex
+  gap-[120px]
+
+  border-b-[4px]
+  border-[#e5e5e5]
 
           max-[900px]:gap-[14px]
           max-[900px]:border-0
@@ -64,19 +52,17 @@ export default function SystemsSection() {
           max-[900px]:scrollbar-hide
           "
         >
-
           {tabs.map((item, i) => (
-
             <button
               key={i}
-
               onClick={() => {
                 setActiveTab(i);
                 setActiveCard(0);
               }}
-
               className="
-              pb-[18px]
+              relative
+
+pb-[18px]
 
               text-[18px]
               font-medium
@@ -97,37 +83,41 @@ export default function SystemsSection() {
 
               max-[900px]:text-[12px]
               "
-
               style={{
+                color: activeTab === i ? "#ae1431" : "#777",
 
-                color:
-                  activeTab === i
-                    ? "#ae1431"
-                    : "#777",
+                borderColor: activeTab === i ? "#ae1431" : "#ddd",
 
-                borderColor:
-                  activeTab === i
-                    ? "#ae1431"
-                    : "#ddd",
-
-                background:
-                  "transparent"
-
+                background: "transparent",
               }}
             >
+              {item.split("\n").map((line, index) => (
+                <span key={index} className="block">
+                  {line}
+                </span>
+              ))}
 
-              {item}
+              {activeTab === i && (
+                <span
+                  className="
+      absolute
+      left-0
+      right-0
 
+      -bottom-[4px]
+
+      h-[6px]
+
+      rounded-t-full
+
+      bg-[#ae1431]
+      "
+                />
+              )}
             </button>
-
           ))}
-
         </div>
-
       </div>
-
-
-
 
       {/* Content */}
       <div
@@ -148,13 +138,11 @@ export default function SystemsSection() {
         max-[900px]:px-[20px]
         "
       >
-
-
         {/* text */}
         <div className="max-w-[420px]">
-
           <h2
             className="
+            font-display
             mb-[24px]
 
             text-[42px]
@@ -168,14 +156,10 @@ export default function SystemsSection() {
             max-[900px]:font-semibold
             "
           >
-
             Systems That
             <br />
-
             Sustain Excellence
-
           </h2>
-
 
           <p
             className="
@@ -188,22 +172,16 @@ export default function SystemsSection() {
             max-[900px]:text-[14px]
             "
           >
-
-            An integrated framework of management oversight,
-            faculty excellence, and purpose-built infrastructure
-            sustaining quality across every institution.
-
+            An integrated framework of management oversight, 
+faculty excellence, and purpose-built infrastructure 
+sustaining quality across every institution, ensuring 
+continuous assessment, teacher development, 
+institutional monitoring,  and transparent processes.
           </p>
-
         </div>
-
-
-
 
         {/* cards */}
         <div className="w-[540px] overflow-hidden max-[900px]:w-full">
-
-
           <div
             className="
             flex
@@ -224,19 +202,13 @@ export default function SystemsSection() {
             max-[900px]:gap-[14px]
             "
           >
-
-
             {cards.map((card, i) => {
-
               const isActive = activeCard === i;
 
               return (
-
                 <div
                   key={i}
-
                   onClick={() => setActiveCard(i)}
-
                   className="
                   cursor-pointer
 
@@ -264,39 +236,19 @@ export default function SystemsSection() {
 
                   max-[900px]:p-[24px]
                   "
-
                   style={{
+                    background: isActive ? "#ae1431" : "white",
 
-                    background:
-                      isActive
-                        ? "#ae1431"
-                        : "white",
-
-                    border:
-                      isActive
-                        ? "none"
-                        : "1px solid #e2e2e2"
-
+                    border: isActive ? "none" : "1px solid #e2e2e2",
                   }}
                 >
-
-
                   <span
                     style={{
-
-                      color:
-                        isActive
-                          ? "#bfbfbf"
-                          : "#999"
-
+                      color: isActive ? "#bfbfbf" : "#999",
                     }}
                   >
-
                     /{card.n}
-
                   </span>
-
-
 
                   <span
                     className="
@@ -311,53 +263,26 @@ export default function SystemsSection() {
 
                     max-[900px]:text-[20px]
                     "
-
                     style={{
-
-                      color:
-                        isActive
-                          ? "white"
-                          : "#111"
-
+                      color: isActive ? "white" : "#111",
                     }}
                   >
-
-                    {card.t
-                      .split(" ")
-                      .map((w, idx) => (
-
-                        <span key={idx}>
-
-                          {w}
-                          <br />
-
-                        </span>
-
-                      ))}
-
+                    {card.t.split(" ").map((w, idx) => (
+                      <span key={idx}>
+                        {w}
+                        <br />
+                      </span>
+                    ))}
                   </span>
-
-
                 </div>
-
               );
-
             })}
-
-
           </div>
-
-
         </div>
-
       </div>
-
-
-
 
       {/* button */}
       <div className="mt-[70px] flex justify-center px-[20px]">
-
         <button
           className="
           rounded-[10px]
@@ -390,15 +315,9 @@ export default function SystemsSection() {
           max-[900px]:py-[16px]
           "
         >
-
           EXPLORE OUR SYSTEMS & STANDARDS
-
         </button>
-
       </div>
-
-
     </section>
   );
-
 }

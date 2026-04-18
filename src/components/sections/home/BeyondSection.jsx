@@ -28,9 +28,8 @@ export default function BeyondSection() {
         {/* title */}
         <h2
           className="
-          mb-[14px]
-
           font-display
+          mb-[14px]
 
           text-[36px]
           font-[700]

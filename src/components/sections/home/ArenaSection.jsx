@@ -29,6 +29,7 @@ export default function ArenaSection() {
           overflow-hidden
         `}
       >
+
         <div
           className="
             grid
@@ -40,6 +41,7 @@ export default function ArenaSection() {
             max-[640px]:gap-[28px]
           "
         >
+
           {/* LEFT */}
           <div className="max-w-[460px]">
             <h2
@@ -76,13 +78,16 @@ export default function ArenaSection() {
             </p>
 
             <div className="flex gap-[14px] flex-wrap max-[640px]:gap-[10px]">
-              <ActionButton>Explore The Arena</ActionButton>
+              <ActionButton>
+                Explore The Arena
+              </ActionButton>
 
               <ActionButton variant="secondary">
                 Discover Our Infrastructure
               </ActionButton>
             </div>
           </div>
+
 
           {/* RIGHT */}
           <div
@@ -92,9 +97,35 @@ export default function ArenaSection() {
               min-h-[520px]
               max-[1000px]:min-h-[300px]
               max-[640px]:min-h-[200px]
+
+              overflow-hidden
+              rounded-[24px]
             `}
           >
-            {/* THE ERAM */}
+
+            {/* VIDEO BACKGROUND */}
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="
+                absolute
+                inset-0
+                w-full
+                h-full
+                object-cover
+              "
+            >
+              <source src="/videos/arena.mp4" type="video/mp4" />
+            </video>
+
+
+            {/* optional overlay for better text visibility */}
+            <div className="absolute inset-0 bg-black/25" />
+
+
+            {/* THE ERAM TEXT */}
             <div
               className="
                 absolute
@@ -110,7 +141,8 @@ export default function ArenaSection() {
 
                 tracking-[-0.045em]
 
-                text-[#111]
+                text-white
+
                 max-[640px]:left-1/2
                 max-[640px]:-translate-x-1/2
                 max-[640px]:right-auto
@@ -122,50 +154,54 @@ export default function ArenaSection() {
             >
               THE ERAM
             </div>
+
           </div>
+
         </div>
 
+
         {/* SPORTS ARENA outline */}
-    <div
-  className="
-    absolute
+        <div
+          className="
+            absolute
 
-    left-[20px]
+            left-[20px]
 
-    bottom-[-48px]
+            bottom-[-48px]
 
-    font-display
+            font-display
 
-    text-[clamp(7.2rem,13.2vw,14rem)]
+            text-[clamp(7.2rem,13.2vw,14rem)]
 
-    font-[700]
+            font-[700]
 
-    tracking-[-0.045em]
+            tracking-[-0.045em]
 
-    leading-[0.88]
+            leading-[0.88]
 
-    text-transparent
-   
+            text-transparent
 
-    [-webkit-text-stroke:1.6px_black]
+            [-webkit-text-stroke:1.6px_black]
 
-    pointer-events-none
-    select-none
+            pointer-events-none
+            select-none
 
-    whitespace-nowrap
-    max-[1000px]:left-[10px]
-    max-[1000px]:bottom-[-30px]
-    max-[1000px]:text-[clamp(4.8rem,15vw,8.2rem)]
-    max-[640px]:left-1/2
-    max-[640px]:-translate-x-1/2
-    max-[640px]:bottom-[-14px]
-    max-[640px]:text-[clamp(2.2rem,14vw,3.6rem)]
-    max-[640px]:[-webkit-text-stroke:1.1px_black]
-    
-  "
->
-  SPORTS ARENA
-</div>
+            whitespace-nowrap
+
+            max-[1000px]:left-[10px]
+            max-[1000px]:bottom-[-30px]
+            max-[1000px]:text-[clamp(4.8rem,15vw,8.2rem)]
+
+            max-[640px]:left-1/2
+            max-[640px]:-translate-x-1/2
+            max-[640px]:bottom-[-14px]
+            max-[640px]:text-[clamp(2.2rem,14vw,3.6rem)]
+            max-[640px]:[-webkit-text-stroke:1.1px_black]
+          "
+        >
+          SPORTS ARENA
+        </div>
+
       </div>
     </section>
   );

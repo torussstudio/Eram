@@ -29,7 +29,7 @@ export default function AboutSection() {
           max-[1280px]:pl-[160px]
           max-[1100px]:pl-0">
 
-            <h2 className="text-[48px] leading-[1.15] font-semibold text-[#f5efe8]
+            <h2 className=" font-display text-[48px] leading-[1.15]  text-[#f5efe8]
 
             max-w-[600px]
 
@@ -81,7 +81,7 @@ export default function AboutSection() {
             max-[1100px]:pl-0
             max-[1100px]:pb-[40px]">
 
-              <p className="text-[32px] leading-[1.25] font-medium text-[#f5efe8]
+              <p className=" font-display text-[32px] leading-[1.25]  text-[#f5efe8]
 
               max-[640px]:text-[26px]">
 

@@ -31,7 +31,7 @@ export default function ExcellenceSection() {
         <div
           className="
             pt-[20px]
-
+ sticky top-[120px] self-start z-30
             flex
             flex-col
 
@@ -92,6 +92,7 @@ export default function ExcellenceSection() {
           {/* heading */}
           <h2
             className="
+            font-display
               text-[48px]
 
               font-[600]

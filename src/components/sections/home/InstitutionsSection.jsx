@@ -18,7 +18,7 @@ export default function InstitutionsSection() {
 
         {/* heading */}
         <div className="max-w-[760px] mx-auto text-center">
-          <h2 className="text-[44px] font-semibold tracking-[-0.02em] text-[#111] max-[900px]:text-[32px] max-[640px]:text-[26px]">
+          <h2 className=" font-display text-[44px] font-semibold tracking-[-0.02em] text-[#111] max-[900px]:text-[32px] max-[640px]:text-[26px]">
             The ERAM Learning Continuum
           </h2>
 

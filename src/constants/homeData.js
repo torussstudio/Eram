@@ -1,4 +1,4 @@
-export const navItems = ['Menu 1', 'Menu 2', 'Menu 3', 'Menu 4', 'Menu 5']
+export const navItems = ['About US', 'Courses', 'Facilities', 'contact', 'Gallery']
 
 export const institutions = [
   {

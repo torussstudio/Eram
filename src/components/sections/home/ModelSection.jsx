@@ -42,12 +42,13 @@ export default function ModelSection() {
 
           <h2
             className="
+            font-display
               mt-[18px]
 
               text-[52px]
               leading-[1.05]
 
-              font-[700]
+              
 
               tracking-[-0.02em]
 
