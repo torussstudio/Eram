@@ -398,16 +398,17 @@ WebkitFontSmoothing: "antialiased",
         {/* ── STUDENT-PARENT PORTAL BUTTON ── */}
         <div className="ml-auto shrink-0 hidden min-[920px]:flex">
           <button
-            style={{
-              backgroundColor: btnBg,
-              color: btnText,
-              borderColor: btnBorder,
-              transition: `background-color ${T}, color ${T}, border-color ${T}`,
-            }}
-            className="font-rethink font-semibold px-6 py-[11px] text-[0.95rem] tracking-[0.03em] rounded-[10px] border cursor-pointer whitespace-nowrap hover:opacity-80 transition-opacity duration-200"
-          >
-            Student-Parent Portal
-          </button>
+      onClick={() => navigate("/portal")}
+      style={{
+        backgroundColor: btnBg,
+        color: btnText,
+        borderColor: btnBorder,
+        transition: `background-color ${T}, color ${T}, border-color ${T}`,
+      }}
+      className="font-rethink font-semibold px-6 py-[11px] text-[0.95rem] tracking-[0.03em] rounded-[10px] border cursor-pointer whitespace-nowrap hover:opacity-80 transition-opacity duration-200"
+    >
+      Student-Parent Portal
+    </button>
         </div>
 
       {/* ── MOBILE HAMBURGER ── */}
@@ -571,7 +572,7 @@ WebkitFontSmoothing: "antialiased",
           </nav>
 
           <div className="px-7 pb-10 mt-auto border-t border-black/10 pt-5">
-            <button className="w-full bg-[#ae1431] text-white rounded-[10px] py-[14px] font-rethink text-[0.85rem] tracking-[0.04em] font-semibold">
+            <button onClick={()=> navigate("/portal")} className="w-full bg-[#ae1431] text-white rounded-[10px] py-[14px] font-rethink text-[0.85rem] tracking-[0.04em] font-semibold">
               Student-Parent Portal
             </button>
           </div>

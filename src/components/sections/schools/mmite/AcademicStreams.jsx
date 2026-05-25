@@ -359,7 +359,7 @@ export default function AcademicStreams() {
                     {item.icon}
                   </div>
                   <div>
-                    <h3 className="stream-title text-white font-serif text-[16px] sm:text-[17px] leading-tight">
+                    <h3 className="stream-title text-white font-rethink text-[16px] sm:text-[17px] leading-tight">
                       {item.title}
                     </h3>
                     <p className="stream-sub text-[13px] text-white/40 mt-0.5">{item.sub}</p>

@@ -6,6 +6,7 @@ import { lazy, Suspense } from "react";
 
 import AboutHero from "../../components/sections/about/AboutHero";
 import PurposeSection from "../../components/sections/about/PurposeSection";
+import StudentParentPortal from "../../components/sections/portal/student-parent-portal";
 
 // =========================
 // BELOW THE FOLD
@@ -117,6 +118,10 @@ export default function About() {
 
       <LazySection height="min-h-[80vh]">
         <ERAMSportsArena />
+      </LazySection>
+
+      <LazySection height="min-h-[80vh]">
+        <StudentParentPortal />
       </LazySection>
     </main>
   );

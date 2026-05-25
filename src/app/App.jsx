@@ -6,6 +6,7 @@ import ScrollToTop from "../components/layout/ScrollToTop";
 // Layout
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
+import StudentParentPortal from "../components/sections/portal/student-parent-portal";
 
 // Pages
 const Home = lazy(() => import("../pages/home/Home"));
@@ -19,6 +20,7 @@ const MmHss = lazy(() => import("../pages/mmhss/MmHss"));
 const Mmps = lazy(() => import("../pages/mmps/Mmps"));
 const Amlp = lazy(() => import("../pages/amlp/Amlp"));
 const Mmite = lazy(() => import("../pages/mmite/Mmite"));
+const portal = lazy(()=> import("../components/sections/portal/student-parent-portal"))
 
 // Preload helpers
 const preloadAbout = () => import("../pages/about-us/About");
@@ -64,6 +66,7 @@ export default function App() {
             <Route path="/amlp" element={<Amlp />} />
             <Route path="/mmite" element={<Mmite />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/portal" element={<StudentParentPortal />} />
           </Routes>
         </Suspense>
 

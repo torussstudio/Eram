@@ -80,16 +80,6 @@ export default function Footer() {
               </li>
 
               <li className="flex gap-3 items-start">
-                <Phone className="mt-1 w-4 h-4" />
-                85929 66234
-              </li>
-
-              <li className="flex gap-3 items-start">
-                <Mail className="mt-1 w-4 h-4" />
-                eram.edu.in
-              </li>
-
-              <li className="flex gap-3 items-start">
                 <Mail className="mt-1 w-4 h-4" />
                 manager@eram.edu.in
               </li>

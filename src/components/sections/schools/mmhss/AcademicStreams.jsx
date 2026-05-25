@@ -597,10 +597,10 @@ export default function AcademicStreams() {
       <div className="w-full max-w-[1300px] mx-auto px-5 sm:px-8 md:px-10 lg:px-16 py-16 md:py-20 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-24">
           {/* ══ LEFT COLUMN ═════════════════════════════════════ */}
-          <div className="flex flex-col">
+          <div className="flex flex-col mt-5 lg:mt-11">
             <p
               ref={subLabelRef}
-              className="font-rethink text-[11px] sm:text-[12px] tracking-[0.28em] text-[#6b5f54] uppercase mb-4 hidden lg:block"
+              className="font-rethink text-[12px] sm:text-[12px] tracking-[0.28em] text-[#6b5f54] uppercase mb-5 hidden lg:block"
             >
               Academic Support Systems
             </p>
@@ -639,7 +639,7 @@ export default function AcademicStreams() {
             </div>
             <button
               onClick={() => scrollTo("academics")}
-              className="structured-btn inline-flex w-fit self-center mt-5 md:mt-6 border border-[#252525]/20 px-4 py-2 rounded-lg text-sm items-center gap-2 hover:bg-[#252525] hover:text-white transition-all duration-300 cursor-pointer font-rethink"
+              className="structured-btn inline-flex w-fit self-left mt-5 md:mt-6 border border-[#252525]/20 px-4 py-2 rounded-lg text-sm items-center gap-2 hover:bg-[#252525] hover:text-white transition-all duration-300 cursor-pointer font-rethink"
             >
               Explore
               <Play className="text-xs transition-colors" />
@@ -649,7 +649,7 @@ export default function AcademicStreams() {
           {/* ══ RIGHT COLUMN ═══════════════════════════════════ */}
           <div
             ref={principalRef}
-            className="group relative overflow-hidden rounded-[28px] h-[420px] md:h-[520px] border border-white/10"
+            className="group relative overflow-hidden mt-6 lg:mt-12 rounded-[28px] h-[350px] md:h-[450px] border border-white/10"
           >
             {/* Principal Image */}
             <img

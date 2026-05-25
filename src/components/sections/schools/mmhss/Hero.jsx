@@ -11,13 +11,13 @@ gsap.registerPlugin(ScrollTrigger);
 const QUICK_FACTS = [
   ["2005", "Year Established"],
   ["State Board", "Curriculum · English Medium"],
-  ["750+", "Student Strength"],
-  ["14 Yrs", "100% Pass Record"],
+  ["300+", "Student Strength"],
+  ["21 Yrs", "100% Pass Record"],
 ];
 
 const STATS = [
-  { value: "14", desc: ["Consecutive Years", "100% Pass Rate"] },
-  { value: "750+", desc: ["Students Currently", "Enrolled"] },
+  { value: "21", desc: ["Consecutive Years", "100% Pass Rate"] },
+  { value: "300+", desc: ["Students Currently", "Enrolled"] },
   { value: "#14", desc: ["Among 150 Schools", "in Palakkad District"] },
   { value: "3", desc: ["Higher Secondary", "Academic Streams"] },
 ];
@@ -186,10 +186,10 @@ export default function Hero() {
                   leading-[1.8] text-white/70 max-w-[560px]"
               >
                 <span className="text-white font-medium">
-                  100% Results. Structured Academic Discipline.
+                 Top 10 among 150 schools in Palakkad.
                 </span>
                 <br />
-                Over 750 students, built on academic transformation, structured
+                Over 300 students, built on academic transformation, structured
                 monitoring, and strong coordination with parents — achieving
                 consistent excellence in higher secondary education.
               </p>
