@@ -166,7 +166,7 @@ export default function LegacySection() {
             {/* Primary button */}
             <button
               ref={btn1Ref}
-              className="group relative bg-[#8B1E1E] text-white px-[clamp(20px,2.5vw,30px)] py-[clamp(12px,1.5vw,15px)] text-[11px] tracking-[0.18em] uppercase flex items-center gap-3 overflow-hidden w-full sm:w-auto cursor-pointer"
+              className="group relative bg-[#ae1431] text-white px-[clamp(20px,2.5vw,30px)] py-[clamp(12px,1.5vw,15px)] text-[11px] tracking-[0.18em] uppercase flex items-center gap-3 overflow-hidden w-full sm:w-auto cursor-pointer"
             >
               <span className="absolute inset-0 bg-[#111] scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-[400ms] ease-[cubic-bezier(0.22,1,0.36,1)]" />
               <span className="font-rethink relative z-10">Partner in Responsible Impact</span>

@@ -8,7 +8,7 @@ export default function HeroSection() {
       <div className="relative rounded-[28px] overflow-hidden text-white">
         {/* BACKGROUND */}
         <img
-          src="/hero-bg.jpg"
+          src="/images/sports-ground.webp"
           alt="Hero"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -27,7 +27,7 @@ py-4 md:py-16 flex flex-col lg:flex-row gap-4"
             {/* LEFT */}
             <div className="flex-1 max-w-[720px]">
               <div className="flex items-center gap-3 mb-5">
-                <p className="font-rethink text-[10px] sm:text-[11px] tracking-[0.28em] text-[#ae1431] uppercase">
+                <p className="font-rethink text-[10px] sm:text-[11px] tracking-[0.28em] uppercase">
                   The Eram Sports Arena
                 </p>
               </div>

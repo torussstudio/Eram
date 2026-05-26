@@ -166,7 +166,7 @@ export default function Hero() {
                 ref={badgeRef}
                 className="flex items-center gap-3 mb-4 sm:mb-5"
               >
-                <p className="font-rethink text-[13px] sm:text-[14px] tracking-[0.28em] text-[#ae1431] uppercase">
+                <p className="font-rethink text-[13px] sm:text-[14px] tracking-[0.28em] text-white uppercase">
                   Teacher Training Institute · Est. 2004
                 </p>
               </div>
