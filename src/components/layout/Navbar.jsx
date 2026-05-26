@@ -35,7 +35,7 @@ function InstitutionsDropdown({ isHome, isActive, onItemClick }) {
       <button
         onClick={() => setOpen((v) => !v)}
         style={{
-          color: isHome ? "#F5EFE8" : "#111111",
+          color:  "#111111",
           transition: `color ${T}`,
         }}
         className="relative pb-[5px] text-[0.92rem] lg:text-[0.97rem] xl:text-[1rem] font-semibold uppercase tracking-[0.04em] cursor-pointer whitespace-nowrap flex items-center gap-[5px]"
@@ -61,7 +61,7 @@ function InstitutionsDropdown({ isHome, isActive, onItemClick }) {
         </svg>
         <span
           style={{
-  backgroundColor: isHome ? "#F5EFE8" : "#ae1431",
+  backgroundColor: "#111111",
   transform: isActive ? "scaleX(1)" : "scaleX(0)",
   opacity: isActive ? 1 : 0,
   transformOrigin: "left center",
@@ -142,9 +142,9 @@ export default function Navbar() {
  const smoothScrollTo = useSmoothScroll();
 
   const T = "500ms cubic-bezier(0.4,0,0.2,1)";
-  const btnBg = isHome ? "#F5EFE8" : "#ae1431";
-  const btnText = isHome ? "#111111" : "#ffffff";
-  const btnBorder = isHome ? "#F5EFE8" : "#ae1431";
+const btnBg = "#ae1431";
+const btnText = "#F5EFE8";
+const btnBorder = "#ae1431";
 
   /* ── Hide navbar when ArenaSection enters viewport ──────────────
      ArenaSection is lazy-loaded so #arena won't exist in the DOM
@@ -309,7 +309,7 @@ export default function Navbar() {
           key={item.path}
           onClick={() => handleNavClick(item.path)}
           style={{
-            color: isHome ? "#F5EFE8" : "#111111",
+            color: "#111111",
             transition: `color ${T}`,
 willChange: "color",
 WebkitFontSmoothing: "antialiased",
@@ -340,7 +340,7 @@ WebkitFontSmoothing: "antialiased",
     >
       <header
         style={{
-          backgroundColor: isHome ? "#ae1431" : "#F5EFE8",
+          backgroundColor: "#F5EFE8",
           transition: `background-color ${T}`,
         }}
         className="
@@ -360,31 +360,22 @@ WebkitFontSmoothing: "antialiased",
         >
           <span
             style={{
-              backgroundColor: isHome ? "#ae1431" : "#F5EFE8",
+              backgroundColor: "#F5EFE8",
               transition: `background-color ${T}`,
             }}
             className="flex items-center h-full py-[12px] pr-4 max-[920px]:h-[48px] max-[920px]:rounded-[14px] max-[920px]:px-3 max-[920px]:py-2"
           >
             <div className="relative w-[128px] lg:w-[138px] h-[32px]">
               <img
-                src="/eramwhite.webp"
+                src="/education-1.svg"
                 alt="ERAM Education"
                 className="absolute inset-0 w-full h-full object-contain object-left"
-                style={{
-                  opacity: isHome ? 1 : 0,
-                  transition: `opacity ${T}`,
-                  pointerEvents: isHome ? "auto" : "none",
-                }}
               />
               <img
                 src="/education-1.svg"
                 alt="ERAM Education"
                 className="absolute inset-0 w-full h-full object-contain object-left"
-                style={{
-                  opacity: isHome ? 0 : 1,
-                  transition: `opacity ${T}`,
-                  pointerEvents: isHome ? "none" : "auto",
-                }}
+                
               />
             </div>
           </span>
@@ -433,7 +424,7 @@ WebkitFontSmoothing: "antialiased",
   cy="21"
   r="19"
   fill="none"
-  stroke="#ae1431"
+  stroke="#111111"
   strokeWidth="2.5"
   strokeLinecap="round"
   strokeDasharray={`${2 * Math.PI * 19}`}
@@ -464,7 +455,7 @@ WebkitFontSmoothing: "antialiased",
           className={`will-change-transform fixed top-0 right-0 z-[110] h-[100dvh] w-full bg-[#F5EFE8] flex flex-col shadow-2xl transition-transform duration-500 ease-out ${open ? "translate-x-0" : "translate-x-full"} min-[920px]:hidden`}
         >
           <div className="flex items-center justify-between px-6 py-5 border-b border-black/10">
-            <span className="font-display font-bold text-xl text-[#ae1431]">
+            <span className="font-display font-bold text-xl text-[#111111]">
               ERAM.
             </span>
             <button
@@ -572,7 +563,7 @@ WebkitFontSmoothing: "antialiased",
           </nav>
 
           <div className="px-7 pb-10 mt-auto border-t border-black/10 pt-5">
-            <button onClick={()=> navigate("/portal")} className="w-full bg-[#ae1431] text-white rounded-[10px] py-[14px] font-rethink text-[0.85rem] tracking-[0.04em] font-semibold">
+            <button onClick={()=> navigate("/portal")} className="w-full bg-[#111111] text-white rounded-[10px] py-[14px] font-rethink text-[0.85rem] tracking-[0.04em] font-semibold">
               Student-Parent Portal
             </button>
           </div>
