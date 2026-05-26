@@ -142,7 +142,7 @@ export default function Hero() {
       <div className="relative rounded-[28px] overflow-hidden text-white">
         {/* BACKGROUND */}
         <img
-          src="/images/mmhss.webp"
+          src="/images/mmite.webp"
           alt="Hero"
           decoding="async"
           fetchPriority="high"

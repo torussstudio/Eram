@@ -56,7 +56,7 @@ const CARDS_DATA = [
   ],
 ];
 
-const SCROLL_BY = 2;
+const SCROLL_BY = 1;
 const CARD_WIDTH = 320;
 const CARD_GAP = 18;
 

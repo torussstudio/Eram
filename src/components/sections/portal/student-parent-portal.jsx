@@ -107,14 +107,14 @@ const StudentParentPortal = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F5EFE8] font-sans">
+    <div className="min-h-screen bg-[#F5EFE8] ">
 
       {/* ── Hero ── */}
       <section className="py-10 sm:py-14">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
-              <p className="text-xs font-rethink tracking-widest text-red-700 uppercase mb-3">
+              <p className="text-xs font-rethink tracking-widest text-[#ae1431] uppercase mb-3">
                 ERAM Group of Institutions
               </p>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display text-gray-900 leading-tight mb-3">
@@ -127,7 +127,7 @@ const StudentParentPortal = () => {
                 Centralised access for fees, academic updates, institutional resources,
                 and administrative information for students and parents across the ERAM ecosystem.
               </p>
-              <button className="cursor-pointer inline-flex items-center gap-2 px-6 py-3 bg-red-700 text-white text-sm font-rethink uppercase tracking-wide rounded-xl hover:bg-red-800 active:scale-95 transition-all">
+              <button className="cursor-pointer inline-flex items-center gap-2 px-6 py-3 bg-[#ae1431] text-white text-sm font-rethink uppercase tracking-wide rounded-xl hover:bg-red-800 active:scale-95 transition-all">
                 Proceed to Full Portal <ChevronRight size={18} />
               </button>
             </div>
@@ -170,7 +170,7 @@ const StudentParentPortal = () => {
               ))}
             </div>
 
-            <button className=" cursor-pointer inline-flex items-center gap-2 px-6 py-3 bg-red-700 text-white text-sm font-rethink uppercase tracking-wide rounded-xl hover:bg-red-800 active:scale-95 transition-all ">
+            <button className=" cursor-pointer inline-flex items-center gap-2 px-6 py-3 bg-[#ae1431] text-white text-sm font-rethink uppercase tracking-wide rounded-xl hover:bg-red-800 active:scale-95 transition-all ">
               Proceed to Fees Portal <ChevronRight size={18} />
             </button>
           </div>
@@ -194,7 +194,7 @@ const StudentParentPortal = () => {
                 onClick={() => setSelectedInstitution(inst.id)}
                 className={`px-4 sm:px-5 py-2 text-sm font-display whitespace-nowrap border-2 rounded-lg transition-all cursor-pointer shrink-0 ${
                  selectedInstitution === inst.id
-  ? "bg-red-700 text-white border-red-700 shadow-sm font-rethink"
+  ? "bg-[#ae1431] text-white border-red-700 shadow-sm font-rethink"
                     : "bg-white text-gray-800 border-gray-300 hover:border-red-600 hover:text-red-700"
                 }`}
               >
@@ -289,7 +289,7 @@ const StudentParentPortal = () => {
                     </div>
                   </div>
 
-                  <button className="shrink-0 p-2.5 bg-red-700 text-white rounded-lg hover:bg-red-800 active:scale-95 transition-all">
+                  <button className="shrink-0 p-2.5 bg-[#ae1431] text-white rounded-lg hover:bg-red-800 active:scale-95 transition-all">
                     <Download size={18} />
                   </button>
                 </div>
@@ -312,15 +312,15 @@ const StudentParentPortal = () => {
       </section>
 
       {/* ── CTA ── */}
-      <section className="bg-black py-12 sm:py-14">
+      <section className="bg-[#F5EFE8] py-12 sm:py-14">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-2xl sm:text-4xl font-display text-white mb-3">
+          <h2 className="text-2xl sm:text-4xl font-display text-black mb-3">
             Ready to Get Started?
           </h2>
-          <p className="text-gray-300 font-rethink sm:text-lg mb-7 max-w-xl mx-auto">
+          <p className="text-black font-rethink sm:text-lg mb-7 max-w-xl mx-auto">
             Access complete portal features for enhanced learning and communication.
           </p>
-          <button className="inline-flex items-center gap-2 px-8 py-3.5 bg-white text-red-700 text-sm font-rethink uppercase tracking-wide rounded-xl hover:bg-gray-100 active:scale-95 transition-all cursor-pointer">
+          <button className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#ae1431] text-white text-sm font-rethink uppercase tracking-wide rounded-xl  cursor-pointer">
             Launch Full Portal <ChevronRight size={20} />
           </button>
         </div>
