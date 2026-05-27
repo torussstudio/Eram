@@ -4,7 +4,7 @@ import {gsap} from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Play } from "lucide-react";
-import { shell } from "../../../constants/homeStyles";
+
 import { useNavigate } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -12,9 +12,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 function AboutHero() {
   const containerRef = useRef(null);
-
   const line0Ref = useRef(null);
-  const line1Ref = useRef(null);
+const line1Ref = useRef(null);
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -98,10 +98,10 @@ function AboutHero() {
 
           {/* IMAGE */}
           <div className="absolute inset-0 overflow-hidden">
-          <div className="hero-img absolute inset-0 scale-110">
+          <div className="hero-img absolute inset-0 scale-[1.04]">
               <OptimizedImage
                 src="/images/about-hero.webp"
-                onLoad={() => ScrollTrigger.refresh()}
+                onLoad={ScrollTrigger.refresh}
                 alt="students"
                 className="block h-full w-full object-cover"
                 loading="eager"
@@ -125,7 +125,7 @@ function AboutHero() {
                 md:hidden
               "
             >
-              <h1 className="font-agency text-white font-light tracking-[-0.03em] leading-[0.95] text-[clamp(1.75rem,7vw,5.8rem)] -mt-16">
+              <h1 className="font-display text-white font-light tracking-[-0.03em] leading-[0.95] text-[clamp(2.8rem,8vw,4.8rem)] -mt-16">
 
                 <span className="block overflow-hidden pb-1">
                   <span
@@ -169,7 +169,7 @@ function AboutHero() {
                   bg-white text-black
                   px-5 py-2.5 rounded-[12px]
                   text-xs font-medium
-                  flex items-center gap-2
+                 inline-flex items-center gap-2
                   hover:bg-gray-200
                   transition
                   opacity-0 translate-y-8
@@ -190,20 +190,30 @@ function AboutHero() {
             >
               <div className="max-w-[640px]">
 
-                <h1
-                  className="
-                    font-display
-                    leading-[1.05]
-                    text-[clamp(2.2rem,4vw,3.5rem)]
-                  "
-                >
-                  <span className="hero-heading-line">
-                    A Legacy of Structure.
-                  </span>
-                  <span className="hero-heading-line">
-                    A Future of Opportunity.
-                  </span>
-                </h1>
+               <h1
+  className="
+    font-display
+    leading-[0.95]
+    tracking-[-0.03em]
+
+    text-[clamp(3.2rem,5vw,5.2rem)]
+
+    flex
+    flex-col
+  "
+>
+  <span className="block overflow-hidden">
+    <span className="hero-heading-line block">
+      A Legacy of Structure.
+    </span>
+  </span>
+
+  <span className="block overflow-hidden">
+    <span className="hero-heading-line block">
+      A Future of Opportunity.
+    </span>
+  </span>
+</h1>
 
                 <p
                   className="
@@ -265,7 +275,7 @@ function AboutHero() {
     bg-white text-black
     px-6 py-3 rounded-[12px]
     text-sm font-medium
-    flex items-center gap-2
+    inline-flex items-center gap-2
     hover:bg-black hover:text-white
     transition
     opacity-0 translate-y-8

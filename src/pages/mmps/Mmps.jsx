@@ -13,6 +13,10 @@ const AcademicStreams = lazy(() =>
   import("../../components/sections/schools/mmps/AcademicStreams")
 );
 
+const Streams = lazy(() =>
+  import("../../components/sections/schools/mmps/Streams")
+);
+
 const ParentPartnership = lazy(() =>
   import("../../components/sections/schools/mmps/ParentPartnership")
 );
@@ -42,6 +46,7 @@ export default function Mmhss() {
       {/* ✅ Deferred sections */}
       <Suspense fallback={null}>
         <Journey />
+        <Streams/>
         <AcademicStreams />
         <ParentPartnership />
         <BeyondAcademics />

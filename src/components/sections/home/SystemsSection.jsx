@@ -80,7 +80,7 @@ const ArrowIcon = ({ active }) => (
   >
     <path
       d="M2 6h8M6 2l4 4-4 4"
-      stroke={active ? "white" : "#888"}
+      stroke="#ffffff"
       strokeWidth="1.6"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -95,7 +95,7 @@ const CarouselArrow = ({ direction, onClick }) => (
     className="
       group flex-none flex items-center justify-center
       w-[42px] h-[42px] rounded-full
-      border-[2px] border-[#cfcfcf] bg-transparent
+      border-[2px] border-white bg-transparent
       transition-all duration-300 ease-out cursor-pointer
       hover:bg-[#ae1431] hover:border-[#ae1431]
       hover:scale-110 hover:shadow-lg
@@ -107,7 +107,7 @@ const CarouselArrow = ({ direction, onClick }) => (
       height="16"
       viewBox="0 0 16 16"
       fill="none"
-      className="transition-colors duration-300 stroke-[#555] group-hover:stroke-white"
+      className="transition-colors duration-300 stroke-white group-hover:stroke-white"
     >
       {direction === "left" ? (
         <path

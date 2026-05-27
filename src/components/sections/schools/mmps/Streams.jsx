@@ -4,15 +4,15 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { shell } from "../../../../constants/homeStyles";
-import { FlaskConical, Monitor, BarChart2 } from "lucide-react";
+import {  BarChart2, NotepadText, Zap } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 const streams = [
-  { icon: <FlaskConical size={18} />, title: "Biology Science",  sub: "State Board · Science Stream"  },
-  { icon: <Monitor      size={18} />, title: "Computer Science", sub: "State Board · Science Stream"  },
-  { icon: <BarChart2    size={18} />, title: "Commerce",         sub: "State Board · Commerce Stream" },
+  { icon: <NotepadText size={18} />, title: "Continuous Progress Tracking",  sub: "Regular assessments & structured monitoring"  },
+  { icon: <Zap       size={18} />, title: "Competitive Sports Exposure", sub: "Early identification & systematic training"  },
+  { icon: <BarChart2    size={18} />, title: "Leadership & Civic Platforms",         sub: "JCI, Rotary Junior Wing, Scout & Guide" },
 ];
 
 const supportItems = [
@@ -299,7 +299,7 @@ export default function AcademicStreams() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-24">
 
           {/* ══ LEFT COLUMN ══════════════════════════════════════════════════ */}
-        <div className="relative w-full min-h-[500px] lg:min-h-[720px] overflow-hidden rounded-[24px]">
+      <div className="relative w-full min-h-[500px] lg:min-h-[720px] overflow-hidden rounded-[24px]">
   
   {/* Top Logo Section */}
   <div className="relative h-[42%] w-full overflow-hidden">
@@ -324,7 +324,7 @@ export default function AcademicStreams() {
   {/* Bottom School Image */}
   <div className="relative h-[58%] w-full overflow-hidden">
     <img
-      src="/images/mmhss.avif"
+      src="/images/mmps.webp"
       alt="Academic Structure"
       className="w-full h-full object-cover"
     />
@@ -345,13 +345,16 @@ export default function AcademicStreams() {
             </div>
 
             {/* Heading — word split */}
-            <h2
+             <h2
               ref={headingRef}
               className="font-display text-white leading-[1.05] tracking-[-0.02em]
                 text-[38px] sm:text-[46px] md:text-[52px] lg:text-[56px] xl:text-[62px]"
               style={{ perspective: "900px" }}
             >
-              {[["Multiple", "Streams."], ["One", "Discipline"], ["Framework."]].map((line, li) => (
+              {[
+                ["An Integrated", " Academic"],
+                ["Athletic", "Ecosystem."],
+              ].map((line, li) => (
                 <span key={li} className="block">
                   {line.map((w, wi) => (
                     <span
@@ -370,11 +373,15 @@ export default function AcademicStreams() {
             <div ref={dividerRef} className="w-10 h-[2px] bg-[#ae1431] mt-6 mb-8" />
 
             {/* Body */}
-            <p ref={bodyRef} className="font-rethink text-[14.5px] md:text-[15px] leading-[1.85] text-[#a09488] max-w-[560px]">
-              MMHSS offers Higher Secondary education under the State syllabus
-              across three focused streams. Our strength lies not just in what
-              we teach, but in how we execute it — guiding, supervising, and
-              supporting every student at every stage.
+           <p
+              ref={bodyRef}
+              className="font-rethink text-[14.5px] md:text-[15px] leading-[1.85] text-[#a09488] max-w-[560px]"
+            >
+              MMPS prepares students for board examinations through structured
+              academic planning, with a curriculum structure that allows
+              flexibility while maintaining consistent academic monitoring.
+              Students are guided progressively from foundational years through
+              board examination stages.
             </p>
 <br></br>
             {/* Streams list */}

@@ -189,7 +189,7 @@ export default function AboutSection() {
     <section
   ref={sectionRef}
   id="about-us"
-  className="bg-[#f5efe8] py-[100px] -mt-[2px]"
+  className="bg-[#f5efe8] pt-[40px] pb-[100px] -mt-[2px]"
 >
 
       {/* ── Desktop ≥ 1100px ──────────────────────────────────────────────── */}
@@ -244,7 +244,7 @@ export default function AboutSection() {
               ref={dQuoteRef}
               className="flex items-end h-[300px] pb-[115px] pl-[40px] max-[1280px]:pl-[60px]"
             >
-              <p className="font-display text-[38px] leading-[1.25] text-[#f5efe8]">
+              <p className="font-display text-[38px] leading-[1.25] text-black">
                 Committed<br />to Access.<br />Dedicated to<br />Excellence
               </p>
             </div>
