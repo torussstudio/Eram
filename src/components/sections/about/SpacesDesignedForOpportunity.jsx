@@ -56,7 +56,7 @@ function SpacesDesignedForOpportunity() {
   return (
     <section
       ref={containerRef}
-      className="bg-[#F5EFE8] py-12 md:py-24 px-4 sm:px-6"
+      className="bg-[#F5EFE8]  px-4 sm:px-6"
     >
       <div className="max-w-[1100px] mx-auto">
         {/* heading */}

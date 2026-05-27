@@ -211,10 +211,10 @@ export default function ArenaSection() {
               {word.split("").map((letter, li) => (
                 <span
                   key={li}
-                  className="inline-block overflow-hidden"
+                  className="inline-block "
                   style={{ verticalAlign: "bottom" }}
                 >
-                  <span className="a-word inline-block">{letter}</span>
+                  <span className="a-word inline-block ">{letter}</span>
                 </span>
               ))}
               {wi < ARENA_WORDS.length - 1 && (

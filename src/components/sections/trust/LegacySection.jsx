@@ -97,16 +97,9 @@ export default function LegacySection() {
   return (
     <section
       ref={sectionRef}
-      className="bg-[#F5EFE8] py-[clamp(60px,10vw,120px)] overflow-hidden relative"
+      className="bg-[#F5EFE8] py-16 overflow-hidden relative"
     >
-      {/* ✅ bgNumRef assigned — decorative background symbol */}
-      <span
-        ref={bgNumRef}
-        className="pointer-events-none select-none absolute right-[clamp(16px,5vw,60px)] bottom-[clamp(12px,4vw,40px)] font-display text-[clamp(80px,14vw,180px)] leading-none text-black/[0.04] opacity-0"
-        aria-hidden="true"
-      >
-        ERAM
-      </span>
+  
 
       <div className="max-w-[1250px] mx-auto px-[clamp(16px,5vw,40px)]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[clamp(32px,5vw,60px)] items-start">
@@ -166,7 +159,7 @@ export default function LegacySection() {
             {/* Primary button */}
             <button
               ref={btn1Ref}
-              className="group relative bg-[#ae1431] text-white px-[clamp(20px,2.5vw,30px)] py-[clamp(12px,1.5vw,15px)] text-[11px] tracking-[0.18em] uppercase flex items-center gap-3 overflow-hidden w-full sm:w-auto cursor-pointer"
+              className="group relative bg-[#ae1431] text-white px-[clamp(20px,2.5vw,30px)] py-[clamp(12px,1.5vw,15px)] text-[11px] tracking-[0.18em] rounded-[12px] uppercase flex items-center gap-3 overflow-hidden w-full sm:w-auto cursor-pointer"
             >
               <span className="absolute inset-0 bg-[#111] scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-[400ms] ease-[cubic-bezier(0.22,1,0.36,1)]" />
               <span className="font-rethink relative z-10">Partner in Responsible Impact</span>
@@ -176,7 +169,7 @@ export default function LegacySection() {
             {/* Secondary button */}
             <button
               ref={btn2Ref}
-              className="group relative border border-black/35 text-[#111] px-[clamp(20px,2.5vw,30px)] py-[clamp(12px,1.5vw,15px)] text-[11px] tracking-[0.18em] uppercase flex items-center gap-3 overflow-hidden w-full sm:w-auto cursor-pointer"
+              className="group relative border rounded-[12px] border-black/35 text-[#111] px-[clamp(20px,2.5vw,30px)] py-[clamp(12px,1.5vw,15px)] text-[11px] tracking-[0.18em] uppercase flex items-center gap-3 overflow-hidden w-full sm:w-auto cursor-pointer"
             >
               <span className="absolute inset-0 bg-[#111] scale-x-0 origin-left group-hover:scale-x-100 transition-transform duration-[400ms] ease-[cubic-bezier(0.22,1,0.36,1)]" />
               <span className="font-rethink relative z-10 group-hover:text-white transition-colors duration-300">Discover Our Academic Framework</span>

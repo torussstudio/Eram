@@ -381,7 +381,7 @@ export default function CommitmentSection() {
     <section className="bg-[#F5EFE8] overflow-hidden">
 
       {/* ── TOP CONTENT ── */}
-      <div ref={topRef} className="max-w-[1100px] mx-auto px-4 py-[90px]">
+      <div ref={topRef} className="max-w-[1100px] mx-auto px-4 py-[40px]">
         <div className="grid md:grid-cols-2 gap-[clamp(2.5rem,6vw,5rem)]">
 
           {/* LEFT */}

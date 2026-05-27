@@ -73,7 +73,7 @@ function ERAMSportsArena() {
   return (
     <section
       ref={containerRef}
-      className="bg-[#F5EFE8] px-5 sm:px-6 py-16 md:py-24"
+      className="bg-[#F5EFE8] px-5 sm:px-6 py-14 md:py-19"
     >
       <div className="max-w-[1100px] mx-auto">
         {/* TOP HEADER */}
@@ -117,7 +117,7 @@ function ERAMSportsArena() {
         </div>
 
         {/* IMAGE CARD */}
-        <div className="mt-10 md:mt-14">
+        <div className="mt-8 md:mt-10">
           <div
             className="
               arena-img-wrap

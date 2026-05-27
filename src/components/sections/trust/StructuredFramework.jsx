@@ -106,7 +106,7 @@ export default function StructuredFramework({ setActive }) {
   return (
     <section
       ref={sectionRef}
-      className="bg-[#0f0f0f] text-white py-[clamp(60px,10vw,120px)] overflow-hidden"
+      className="bg-[#0f0f0f] text-white py-16 overflow-hidden"
     >
       <div className="max-w-[1120px] mx-auto px-[clamp(16px,5vw,40px)]">
 
@@ -130,13 +130,7 @@ export default function StructuredFramework({ setActive }) {
             </p>
           </div>
 
-          <div
-            className="scan-line h-px"
-            style={{
-              background:
-                "linear-gradient(90deg, rgba(179,32,29,0.9) 0%, rgba(255,255,255,0.06) 100%)",
-            }}
-          />
+         
         </div>
 
         {/* ── GRID ── */}

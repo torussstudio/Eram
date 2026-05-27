@@ -178,12 +178,9 @@ const StudentParentPortal = () => {
       </section>
 
       {/* ── Institution Selection + Notices ── */}
-      <section className="pb-10 sm:pb-12">
+      <section className="pb-8 sm:pb-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
            <p className="text-gray-500 text-2xl font-rethink mb-6">Select Your Institution</p>
-          <h4 className="  font-display text-[20px] text-gray-900 mb-1">
-            Institution-Specific Access
-          </h4>
          <br/>
 
           {/* Tab strip */}

@@ -242,9 +242,9 @@ export default function AboutSection() {
           <div className="grid grid-cols-3 gap-[24px]">
             <div
               ref={dQuoteRef}
-              className="flex items-end h-[300px] pb-[115px] pl-[40px] max-[1280px]:pl-[60px]"
+              className="flex items-end h-[300px] pb-[70px] pl-[40px] max-[1280px]:pl-[60px]"
             >
-              <p className="font-display text-[38px] leading-[1.25] text-black">
+              <p className="font-display  text-[38px] leading-[1.25] text-black">
                 Committed<br />to Access.<br />Dedicated to<br />Excellence
               </p>
             </div>

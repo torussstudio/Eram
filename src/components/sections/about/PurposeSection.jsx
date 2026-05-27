@@ -108,7 +108,7 @@ function PurposeSection() {
   );
 
   return (
-    <section ref={containerRef} className="bg-[#F5EFE8] px-4 py-14 md:py-20">
+    <section ref={containerRef} className="bg-[#F5EFE8] px-4 py-6 md:py-10">
       <div
         className="
     max-w-[1200px]

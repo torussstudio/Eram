@@ -227,7 +227,7 @@ function SystemsThatSustainExcellence() {
       {/* ══════════════════════════════════════════
           SECTION 1 — Heading
       ══════════════════════════════════════════ */}
-      <section className="bg-[#0f0f0f] overflow-hidden pt-8 pb-6 px-5 md:pt-8 md:pb-6 md:px-6">
+      <section className="bg-[#0f0f0f] overflow-hidden pt-10 pb-6 px-5 md:pt-14 md:pb-6 md:px-6">
         <div className="w-full md:max-w-[1100px] md:mx-auto">
           <div className="text-center max-w-[720px] mx-auto">
 

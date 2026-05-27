@@ -232,7 +232,7 @@ function StructuredLearningSection() {
 
         {/* LEADERSHIP SECTION */}
         <div className="leadership-container grid md:grid-cols-2 gap-6 md:gap-12 items-start">
-          <h3 className="leadership-text md:opacity-0 md:translate-y-8 font-display text-[1.08rem] sm:text-[26px] md:text-[32px] leading-snug ml-0 md:ml-[160px]">
+          <h3 className="leadership-text md:opacity-0 md:translate-y-8 font-display text-[1.08rem] sm:text-[26px] md:text-[32px] leading-snug ml-10 md:ml-18">
             Strategic Leadership &<br />Academic Oversight
           </h3>
           <p className="leadership-text md:opacity-0 md:translate-y-8 text-[14.5px] text-white/80 leading-relaxed w-full md:max-w-[420px] ml-0 md:ml-[20px] font-rethink">
