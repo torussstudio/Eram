@@ -189,7 +189,7 @@ export default function AboutSection() {
     <section
   ref={sectionRef}
   id="about-us"
-  className=" bg-[#ae1431] py-[100px] -mt-[2px]"
+  className="bg-[#f5efe8] py-[100px] -mt-[2px]"
 >
 
       {/* ── Desktop ≥ 1100px ──────────────────────────────────────────────── */}
@@ -197,7 +197,7 @@ export default function AboutSection() {
 
         <div className="grid grid-cols-[300px_1fr] gap-x-[100px]">
           <div ref={dLabelRef} className="pl-[50px]">
-            <span className="text-[18px] tracking-[0.15em] uppercase text-[#f5efe8] font-medium">
+            <span className="text-[18px] tracking-[0.15em] uppercase text-[#111111] font-medium">
               ABOUT US
             </span>
           </div>
@@ -205,7 +205,7 @@ export default function AboutSection() {
           <div className="pl-[150px] max-[1280px]:pl-[160px]">
             <h2
               ref={dHeadingRef}
-              className="font-display text-[48px] leading-[1.15] text-[#f5efe8] max-w-[600px]"
+              className="font-display text-[48px] leading-[1.15] text-[#111111] max-w-[600px]"
             >
               An Institutional
               <br />
@@ -214,7 +214,7 @@ export default function AboutSection() {
 
             <p
               ref={dParaRef}
-              className="font-rethink mt-6 text-[14.5px] leading-[1.75] text-[#f5efe8] max-w-[520px]"
+              className="font-rethink mt-6 text-[14.5px] leading-[1.75] text-[#111111] max-w-[520px]"
             >
               ERAM Education was established to build disciplined, value-based
               institutions that expand access to quality learning and reach
@@ -226,7 +226,7 @@ export default function AboutSection() {
              <div className="beyond-heading pt-[30px] max-[640px]:mb-[15px]">
 <ActionButton
   onClick={() => smoothScrollTo("institutions")}
-  className="font-rethink !bg-[#ae1431] hover:!bg-black cursor-pointer"
+ className="font-rethink !bg-black !text-[#f5efe8] hover:!bg-[#222] cursor-pointer"
 >
   Explore Our Institutions
 </ActionButton>
@@ -277,21 +277,21 @@ export default function AboutSection() {
         <div className="px-[28px] max-[480px]:px-[20px]">
 
          <div ref={mLabelRef} className="mb-[36px]">
-  <span className="text-[11px] tracking-[0.28em] uppercase text-[#f5efe8] font-medium">
+  <span className="text-[11px] tracking-[0.28em] uppercase text-[#111111] font-medium">
     ABOUT US
   </span>
 </div>
 
           <h2
             ref={mHeadingRef}
-            className="font-display text-[42px] leading-[1.18] text-[#f5efe8] mb-[28px] max-[480px]:text-[34px] max-[360px]:text-[28px]"
+            className="font-display text-[42px] leading-[1.18] text-[#111111] mb-[28px] max-[480px]:text-[34px] max-[360px]:text-[28px]"
           >
             An Institutional<br />Movement of Purpose
           </h2>
 
           <p
             ref={mParaRef}
-            className="font-rethink text-[14px] leading-[1.85] text-[#f5efe8]/75 max-w-[500px] mb-[44px]"
+            className="font-rethink text-[14px] leading-[1.85] text-[#111111] max-w-[500px] mb-[44px]"
           >
             ERAM Education was established to build disciplined, value-based
             institutions that expand access to quality learning and reach
@@ -302,9 +302,9 @@ export default function AboutSection() {
 
           <div
             ref={mQuoteRef}
-            className="mb-[52px] border-l-[3px] border-[#f5efe8]/50 pl-[22px]"
+            className="mb-[52px] border-l-[3px] border-black/20 pl-[22px]"
           >
-            <p className="font-display text-[26px] leading-[1.3] text-[#f5efe8] max-[480px]:text-[22px]">
+            <p className="font-display text-[26px] leading-[1.3] text-[#111111] max-[480px]:text-[22px]">
               Committed<br />to Access.<br />Dedicated to<br />Excellence
             </p>
           </div>

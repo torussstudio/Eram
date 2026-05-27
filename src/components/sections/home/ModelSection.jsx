@@ -166,12 +166,12 @@ export default function ModelSection() {
             {/* Desktop Left Arrow */}
             <button
               onClick={() => scrollCarousel(-1)}
-              className="
+              className=" group
                 max-[560px]:hidden
-                absolute left-0 top-1 -translate-y-1/2 -translate-x-16 z-10
+                absolute left-0  bottom-15 -translate-y-1/2 -translate-x-16 z-10
                 w-[42px] h-[42px] rounded-full border-2 border-[#f5efe8]/40
                 bg-transparent flex items-center justify-center
-                transition-all duration-300 hover:bg-[#f5efe8]/10 hover:border-[#f5efe8]
+                transition-all duration-300 hover:border-transparent
                 cursor-pointer
               "
             >
@@ -216,11 +216,11 @@ export default function ModelSection() {
                     /0{i + 1}
                   </div>
                   <p
-                    className="
-                      font-rethink mt-[100px] text-[26px] leading-[1.15] text-[#f5efe8]
-                      max-[900px]:mt-[72px] max-[900px]:text-[22px]
-                      max-[560px]:mt-[36px] max-[560px]:text-[15px] max-[560px]:leading-[1.4]
-                    "
+                    className={`
+                      font-rethink mt-[65px] text-[26px] leading-[1.15] text-[#f5efe8]
+                      max-[900px]:mt-[40px] max-[900px]:text-[22px]
+                      max-[560px]:mt-[22px] max-[560px]:text-[15px] max-[560px]:leading-[1.4]
+                        ${i >= 4 ? "mt-[93px]" : "mt-[50px]"}`}
                     dangerouslySetInnerHTML={{ __html: item }}
                   />
                 </div>
@@ -230,12 +230,12 @@ export default function ModelSection() {
             {/* Desktop Right Arrow */}
             <button
               onClick={() => scrollCarousel(1)}
-              className="
+              className=" group
                 max-[560px]:hidden
-                absolute right-0 top-1 -translate-y-1/2 translate-x-12 z-10
+                absolute right-0 bottom-15 -translate-y-1/2 translate-x-12 z-10
                 w-[42px] h-[42px] rounded-full border-2 border-[#f5efe8]/40
                 bg-transparent flex items-center justify-center
-                transition-all duration-300 hover:bg-[#f5efe8]/10 hover:border-[#f5efe8]
+               transition-all duration-300 hover:border-transparent
                 cursor-pointer
               "
             >

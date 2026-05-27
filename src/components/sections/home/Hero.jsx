@@ -23,7 +23,7 @@ const sectionCls = [
 const cardCls = [
   "relative min-h-[650px] rounded-[20px] overflow-hidden",
   "px-[60px] xl:px-[80px] 2xl:px-[110px]",
-  "pb-[92px] pt-[180px]",
+  "pb-[92px] pt-[130px]",
   "max-[920px]:px-[36px] max-[920px]:pt-[180px]",
   "max-[640px]:px-6 max-[640px]:pt-[150px]",
   "max-[420px]:px-4 max-[420px]:pt-[130px]",

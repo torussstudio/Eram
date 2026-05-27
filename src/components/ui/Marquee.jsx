@@ -28,7 +28,7 @@ right-1/2
 
 
 
-mb-[80px]
+mb-[30px]
 
 w-screen
 

@@ -5,29 +5,32 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ActionButton from "../../ui/ActionButton";
 import { section } from "../../../constants/homeStyles";
 
-
 gsap.registerPlugin(ScrollTrigger);
 
 const BEYOND_CARDS = [
-  { code: "/01", title: "STEM CLUBS",                  image: "/images/beyond2.avif" },
-  { code: "/02", title: "RESIDENTIAL CAMPS",           image: "/images/beyond3.avif" },
-  { code: "/03", title: "TRAINING SESSIONS",           image: "/images/beyond4.avif" },
-  { code: "/04", title: "STATE-LEVEL PROGRAMS",        image: "/images/beyond5.avif" },
-  { code: "/05", title: "SOCIETY-CONNECT INITIATIVES", image: "/images/beyond6.avif" },
-  { code: "/06", title: "JCI & ROTARY",               image: "/images/beyond1.avif" },
+  { code: "/01", title: "STEM CLUBS", image: "/images/beyond2.avif" },
+  { code: "/02", title: "RESIDENTIAL CAMPS", image: "/images/beyond3.avif" },
+  { code: "/03", title: "TRAINING SESSIONS", image: "/images/beyond4.avif" },
+  { code: "/04", title: "STATE-LEVEL PROGRAMS", image: "/images/beyond5.avif" },
+  {
+    code: "/05",
+    title: "SOCIETY-CONNECT INITIATIVES",
+    image: "/images/beyond6.avif",
+  },
+  { code: "/06", title: "JCI & ROTARY", image: "/images/beyond1.avif" },
 ];
 
-const CARD_WIDTH       = 350; // px  (desktop)
+const CARD_WIDTH = 350; // px  (desktop)
 const CARD_WIDTH_MOBILE = 260; // px  (≤640 px)
-const GAP              = 22;
-const GAP_MOBILE       = 12;
+const GAP = 22;
+const GAP_MOBILE = 12;
 
 // How many cards to scroll per arrow click
 const SCROLL_BY = 1;
 
 export default function BeyondSection() {
-  const sectionRef   = useRef(null);
-  const scrollRef    = useRef(null);
+  const sectionRef = useRef(null);
+  const scrollRef = useRef(null);
 
   /* ── Scroll helpers ─────────────────────────────────────── */
   const isMobile = () => window.innerWidth <= 640;
@@ -36,62 +39,65 @@ export default function BeyondSection() {
     const el = scrollRef.current;
     if (!el) return;
     const cardW = isMobile() ? CARD_WIDTH_MOBILE : CARD_WIDTH;
-    const gap   = isMobile() ? GAP_MOBILE : GAP;
-    const step  = (cardW + gap) * SCROLL_BY;
-    el.scrollBy({ left: direction === "right" ? step : -step, behavior: "smooth" });
+    const gap = isMobile() ? GAP_MOBILE : GAP;
+    const step = (cardW + gap) * SCROLL_BY;
+    el.scrollBy({
+      left: direction === "right" ? step : -step,
+      behavior: "smooth",
+    });
   };
 
   /* ── GSAP entrance animations ───────────────────────────── */
- useGSAP(
-  () => {
-    const isMobile = window.innerWidth < 768;
+  useGSAP(
+    () => {
+      const isMobile = window.innerWidth < 768;
 
-    if (isMobile) {
-      gsap.set(".beyond-heading, .beyond-card", {
-        opacity: 1,
-        x: 0,
-        y: 0,
-        clearProps: "all",
-      });
+      if (isMobile) {
+        gsap.set(".beyond-heading, .beyond-card", {
+          opacity: 1,
+          x: 0,
+          y: 0,
+          clearProps: "all",
+        });
 
-      return;
-    }
+        return;
+      }
 
-    const defaults = { ease: "power2.out" };
+      const defaults = { ease: "power2.out" };
 
-    gsap.fromTo(
-      ".beyond-heading",
-      { opacity: 0, y: 30 },
-      {
-        ...defaults,
-        opacity: 1,
-        y: 0,
-        duration: 0.7,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top 85%",
+      gsap.fromTo(
+        ".beyond-heading",
+        { opacity: 0, y: 30 },
+        {
+          ...defaults,
+          opacity: 1,
+          y: 0,
+          duration: 0.7,
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 85%",
+          },
         },
-      },
-    );
+      );
 
-    gsap.fromTo(
-      ".beyond-card",
-      { opacity: 0, y: 30 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 0.6,
-        stagger: 0.08,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: ".beyond-cards-container",
-          start: "top 90%",
+      gsap.fromTo(
+        ".beyond-card",
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          stagger: 0.08,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".beyond-cards-container",
+            start: "top 90%",
+          },
         },
-      },
-    );
-  },
-  { scope: sectionRef },
-);
+      );
+    },
+    { scope: sectionRef },
+  );
 
   /* ── Render ─────────────────────────────────────────────── */
   return (
@@ -101,7 +107,6 @@ export default function BeyondSection() {
       className={`${section}  pt-[90px]  bg-[#ae1431]`}
     >
       <div className="mx-auto w-full max-w-[1200px] px-[20px] md:px-[32px] lg:px-[40px] text-center">
-
         {/* Heading */}
         <h2 className="beyond-heading font-display mb-[14px] text-[36px] font-[700] leading-[1.2] tracking-[-0.02em] text-[#f5efe8] max-[640px]:text-[28px]">
           BEYOND THE CLASSROOM
@@ -126,7 +131,7 @@ export default function BeyondSection() {
 
         {/* Cards + Arrow Buttons */}
         <div
-  className="
+          className="
     beyond-cards-container
     mx-auto
     mt-[48px]
@@ -136,10 +141,10 @@ export default function BeyondSection() {
     max-[640px]:
     mt-[34px]
   "
->
+        >
           {/* Row: arrow-left | scrollable strip | arrow-right */}
           <div
-  className="
+            className="
     flex
     items-center
 
@@ -151,17 +156,19 @@ export default function BeyondSection() {
     max-[640px]:
     gap-[6px]
   "
->
-
+          >
             {/* ← Left Arrow */}
-            <ArrowButton direction="left" onClick={() => scrollCarousel("left")} />
+            <ArrowButton
+              direction="left"
+              onClick={() => scrollCarousel("left")}
+            />
 
             {/* Scrollable cards */}
-          <div
-  ref={scrollRef}
-  style={{
-    WebkitOverflowScrolling: "touch",
-  }}
+            <div
+              ref={scrollRef}
+              style={{
+                WebkitOverflowScrolling: "touch",
+              }}
               className="
   flex
   flex-1
@@ -189,15 +196,15 @@ overflow-x-auto overscroll-x-contain
 "
             >
               {BEYOND_CARDS.map((card, index) => (
-                <BeyondCard
-                  key={card.title}
-                  card={card}
-                />
+                <BeyondCard key={card.title} card={card} />
               ))}
             </div>
 
             {/* → Right Arrow */}
-            <ArrowButton direction="right" onClick={() => scrollCarousel("right")} />
+            <ArrowButton
+              direction="right"
+              onClick={() => scrollCarousel("right")}
+            />
           </div>
         </div>
       </div>
@@ -228,10 +235,10 @@ function ArrowButton({ direction, onClick }) {
         duration-300
         ease-out
 
-        hover:bg-[#f5efe8]
-        hover:border-[#f5efe8]
-        hover:scale-110
-        hover:shadow-[0_0_18px_rgba(245,239,232,0.35)]
+        hover:bg-transparent
+hover:border-transparent
+hover:scale-110
+hover:shadow-none
 
         active:scale-95
 
@@ -248,14 +255,24 @@ function ArrowButton({ direction, onClick }) {
         className="
           transition-colors duration-300
           stroke-[#f5efe8]
-          group-hover:stroke-[#ae1431]
+          group-hover:stroke-whitea
           max-[640px]:w-[14px] max-[640px]:h-[14px]
         "
       >
         {direction === "left" ? (
-          <path d="M11 14L6 9L11 4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          <path
+            d="M11 14L6 9L11 4"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         ) : (
-          <path d="M7 4L12 9L7 14" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          <path
+            d="M7 4L12 9L7 14"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         )}
       </svg>
     </button>
@@ -267,7 +284,7 @@ function BeyondCard({ card, isActive, onClick }) {
   return (
     <div
       onClick={onClick}
-     className="
+      className="
   beyond-card
 
   group
@@ -298,8 +315,8 @@ function BeyondCard({ card, isActive, onClick }) {
         src={card.image}
         alt={card.title}
         loading="lazy"
-  decoding="async"
-  fetchPriority="low"
+        decoding="async"
+        fetchPriority="low"
         className="
 absolute inset-0 h-full w-full object-cover
 transition-transform duration-500 ease-out
@@ -309,20 +326,19 @@ group-hover:scale-[1.02]
 "
       />
 
-
-{/* Content */}
-<div className="relative z-[3] flex h-full flex-col justify-between px-[clamp(18px,3vw,30px)] py-[clamp(18px,3vw,28px)] max-[640px]:px-[20px] max-[640px]:py-[18px]">
+      {/* Content */}
+      <div className="relative z-[3] flex h-full flex-col justify-between px-[clamp(18px,3vw,30px)] py-[clamp(18px,3vw,28px)] max-[640px]:px-[20px] max-[640px]:py-[18px]">
         {/* Code */}
-       {/* <div className="absolute inset-0 bg-black/35 transition-all duration-500" /> */}
+        {/* <div className="absolute inset-0 bg-black/35 transition-all duration-500" /> */}
 
-{/* <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent transition-all duration-500 group-hover:from-black/40 group-hover:via-black/5" /> */}
+        {/* <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent transition-all duration-500 group-hover:from-black/40 group-hover:via-black/5" /> */}
         <div className="text-[clamp(1rem,2vw,1.55rem)] font-[700] tracking-[0.16em] flex justify-start text-white/85 max-[640px]:text-[19px]">
           {card.code}
         </div>
 
         {/* Title */}
-       <div
-  className="
+        <div
+          className="
     font-rethink
     text-[clamp(1rem,2vw,1.45rem)]
     font-[500]
@@ -331,9 +347,9 @@ group-hover:scale-[1.02]
     
     max-[640px]:text-[18px]
   "
->
-  {card.title}
-</div>
+        >
+          {card.title}
+        </div>
       </div>
     </div>
   );

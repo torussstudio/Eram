@@ -120,9 +120,6 @@ export default function About() {
         <ERAMSportsArena />
       </LazySection>
 
-      <LazySection height="min-h-[80vh]">
-        <StudentParentPortal />
-      </LazySection>
     </main>
   );
 }

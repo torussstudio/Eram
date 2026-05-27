@@ -254,9 +254,9 @@ export default function SystemsSection() {
       );
     }
     return () => {
-    gsap.killTweensOf(dCards);
-    gsap.killTweensOf(mobCardRefs.current);
-  };
+      gsap.killTweensOf(dCards);
+      gsap.killTweensOf(mobCardRefs.current);
+    };
   }, [activeTab]);
 
   /* ── tab click ── */
@@ -390,7 +390,7 @@ export default function SystemsSection() {
     <section
       ref={sectionRef}
       id="facilities"
-      className="bg-[#f5efe8] py-[90px] max-[899px]:pt-[24px] max-[899px]:pb-[48px] overflow-hidden"
+      className="bg-[#ae1431] py-[90px] max-[899px]:pt-[24px] max-[899px]:pb-[48px] overflow-hidden"
     >
       {/* ══ Desktop ≥ 900px ══════════════════════════════════════════════ */}
       <div className="hidden min-[900px]:block">
@@ -398,7 +398,7 @@ export default function SystemsSection() {
         <div className="desk-tabbar flex justify-center mb-[70px] px-[20px]">
           <div
             ref={tabBarRef}
-            className="relative flex gap-[160px] border-b-[4px] border-[#e5e5e5]"
+            className="relative flex gap-[160px] border-b-[4px] border-[#c98a97]"
           >
             {TABS.map((label, i) => (
               <button
@@ -406,7 +406,7 @@ export default function SystemsSection() {
                 ref={(el) => (tabRefs.current[i] = el)}
                 onClick={() => handleTabClick(i)}
                 className="relative pb-[18px] text-[18px] font-medium tracking-[0.12em] uppercase whitespace-nowrap transition-colors duration-300 cursor-pointer"
-                style={{ color: activeTab === i ? "#ae1431" : "#777" }}
+                style={{ color: activeTab === i ? "#f5efe8" : "#d7b8bf" }}
               >
                 {label.split("\n").map((line, j) => (
                   <span key={j} className="block">
@@ -417,7 +417,7 @@ export default function SystemsSection() {
             ))}
             <span
               ref={indicatorRef}
-              className="absolute -bottom-[4px] h-[6px] rounded-t-full bg-[#ae1431] pointer-events-none"
+              className="absolute -bottom-[4px] h-[6px] rounded-t-full bg-[#f5efe8] pointer-events-none"
               style={{ left: 0, width: 0 }}
             />
           </div>
@@ -433,12 +433,12 @@ export default function SystemsSection() {
               ref={textBlockRef}
               className="max-w-[420px] ml-[40px] flex-shrink-0"
             >
-              <h2 className="font-display mb-[32px] text-[42px] leading-[1.1] text-[#111]">
+              <h2 className="font-display mb-[32px] text-[42px] leading-[1.1] text-[#f5efe8]">
                 Systems That
                 <br />
                 Sustain Excellence
               </h2>
-              <p className="font-rethink text-[14.5px] leading-[1.8] text-black">
+              <p className="font-rethink text-[14.5px] leading-[1.8] text-[#f5efe8]">
                 An integrated framework of management oversight, faculty
                 excellence, and purpose-built infrastructure sustaining quality
                 across every institution, ensuring continuous assessment,
@@ -514,7 +514,7 @@ export default function SystemsSection() {
         <div className="desk-cta mt-[70px] flex justify-center px-[20px]">
           <button
             onClick={() => navigate("/about-us")}
-            className="font-rethink rounded-[8px] border border-[#cfcfcf] px-[36px] py-[14px] text-[12px] font-[500] uppercase tracking-[0.16em] text-[#111] transition-all duration-300 hover:border-black hover:bg-black hover:text-white cursor-pointer"
+            className="font-rethink rounded-[8px] border border-[#cfcfcf] px-[36px] py-[14px] text-[12px] font-[500] uppercase tracking-[0.16em] text-[#f5efe8] transition-all duration-300 hover:border-black hover:bg-black hover:text-white cursor-pointer"
           >
             EXPLORE OUR SYSTEMS & STANDARDS
           </button>
@@ -524,7 +524,7 @@ export default function SystemsSection() {
       {/* ══ Mobile < 900px ═══════════════════════════════════════════════ */}
       <div className="min-[900px]:hidden px-[22px]">
         <div className="mb-[20px]">
-          <h2 className="mob-heading font-display text-[32px] font-black leading-[1.12] text-[#111] mb-[10px]">
+          <h2 className="mob-heading font-display text-[32px] font-black leading-[1.12] text-[#f5efe8] mb-[10px]">
             Systems That
             <br />
             Sustain Excellence
@@ -549,14 +549,14 @@ export default function SystemsSection() {
               }}
               className="flex-1 flex flex-col items-start gap-[6px] rounded-[14px] px-[14px] py-[12px] transition-colors duration-300 border"
               style={{
-                background: activeTab === i ? "#ae1431" : "transparent",
-                borderColor: activeTab === i ? "#ae1431" : "#ddd",
+                background: activeTab === i ? "#f5efe8" : "transparent",
+                borderColor:
+                  activeTab === i ? "#f5efe8" : "rgba(255,255,255,0.2)",
               }}
             >
               <span
                 className="text-[10px] font-rethink tracking-[0.18em]"
-                style={{
-                  color: activeTab === i ? "rgba(255,255,255,0.55)" : "#aaa",
+               style={{ color: activeTab === i ? "#111111" : "#f5efe8" ,
                 }}
               >
                 0{i + 1}
@@ -586,7 +586,7 @@ export default function SystemsSection() {
                 className="will-change-transform mob-card flex items-center justify-between rounded-[18px] px-[22px] py-[20px] cursor-pointer border"
                 style={{
                   background: isActive ? "#ae1431" : "#111",
-                  borderColor: isActive ? "#ae1431" : "#222",
+                 borderColor: isActive ? "#f5efe8" : "rgba(255,255,255,0.08)",
                   boxShadow: isActive
                     ? "0 8px 32px rgba(174,20,49,0.22)"
                     : "0 2px 8px rgba(0,0,0,0.04)",

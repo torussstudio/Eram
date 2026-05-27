@@ -16,9 +16,7 @@ const impactItems = [
   { code: "/06", title: "WHO-certified teacher training programs"              },
 ];
 
-const CARD_WIDTH  = 350;
-const CARD_GAP    = 20;
-const SCROLL_BY   = 1;
+
 
 /* ── SplitHeading ────────────────────────────────────────────────── */
 function SplitHeading({ text, className }) {
@@ -53,7 +51,7 @@ function ImpactCard({ code, title, cardClass = "" }) {
   return (
     <div className={`relative ${cardClass}`}>
       <div className="card-line absolute left-0 top-0 h-full w-[2px] bg-[#f5efe8]" />
-      <div className="flex h-[225px] flex-col py-[6px]">
+      <div className="flex h-[225px] flex-col ">
         <span className="card-code tracking-[0.16em] text-[#f5efe8]">
           {code}
         </span>
@@ -78,7 +76,7 @@ function CarouselArrow({ direction, onClick }) {
         border-[2px] border-[#f5efe8]/50
         bg-transparent
         transition-all duration-300 ease-out
-        hover:bg-[#f5efe8] hover:border-[#f5efe8] hover:scale-110
+        hover:border-transparent hover:bg-transparent hover:scale-110
         active:scale-95 cursor-pointer
         max-[640px]:w-[40px] max-[640px]:h-[40px]
       "
@@ -86,7 +84,7 @@ function CarouselArrow({ direction, onClick }) {
       <svg
         width="16" height="16" viewBox="0 0 16 16" fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="transition-colors duration-300 stroke-[#f5efe8] group-hover:stroke-[#ae1431]"
+        className="transition-colors duration-300 stroke-[#f5efe8] group-hover:stroke-white"
       >
         {direction === "left" ? (
           <path d="M10 13L5 8L10 3" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
@@ -101,17 +99,32 @@ function CarouselArrow({ direction, onClick }) {
 /* ── Main ────────────────────────────────────────────────────────── */
 export default function ImpactSection() {
   const sectionRef  = useRef(null);
-  const carouselRef = useRef(null);
+  const desktopCarouselRef = useRef(null);
+const mobileCarouselRef = useRef(null);
 
-  const scrollCarousel = (direction) => {
-    const el = carouselRef.current;
-    if (!el) return;
-    const isMobile = window.innerWidth <= 640;
-    const cardW    = isMobile ? 190 : CARD_WIDTH;
-    const gap      = isMobile ? 16  : CARD_GAP;
-    const step     = (cardW + gap) * SCROLL_BY;
-    el.scrollBy({ left: direction === "right" ? step : -step, behavior: "smooth" });
-  };
+const scrollCarousel = (direction) => {
+  const isMobile = window.innerWidth <= 640;
+
+  const el = isMobile
+    ? mobileCarouselRef.current
+    : desktopCarouselRef.current;
+
+  if (!el) return;
+
+  const firstCard = el.querySelector(".impact-scroll-card");
+  if (!firstCard) return;
+
+  const cardWidth = firstCard.offsetWidth;
+
+  const gap = isMobile ? 16 : 20;
+
+  const step = cardWidth + gap;
+
+  el.scrollBy({
+    left: direction === "right" ? step : -step,
+    behavior: "smooth",
+  });
+};
 
   useGSAP(() => {
     const root     = sectionRef.current;
@@ -262,7 +275,7 @@ export default function ImpactSection() {
         <div className="mx-auto flex items-center gap-[14px] w-[min(1100px,calc(100vw-160px))] max-[640px]:hidden">
           <CarouselArrow direction="left" onClick={() => scrollCarousel("left")} />
           <div
-            ref={carouselRef}
+            ref={desktopCarouselRef}
             className="flex-1 overflow-x-auto scroll-smooth snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden pb-5 cursor-pointer"
           >
             <div className="flex gap-5 px-8">
@@ -271,10 +284,11 @@ export default function ImpactSection() {
                   key={item.code}
                   {...item}
                   cardClass="
+                   impact-scroll-card
                     flex-none snap-start
                     w-[350px] min-h-[120px] pl-[26px] pr-[26px]
-                    [&_.card-line]:h-[225px]
-                    [&_.card-code]:text-[25px] [&_.card-code]:mb-[70px]
+                    [&_.card-line]:h-[180px]
+                    [&_.card-code]:text-[25px] [&_.card-code]:mb-[15px]
                     [&_.card-title]:text-[25px] [&_.card-title]:mt-[50px]
                   "
                 />
@@ -288,7 +302,7 @@ export default function ImpactSection() {
         <div className="hidden max-[640px]:flex flex-col gap-[18px]">
           {/* Scrollable cards */}
           <div
-            ref={carouselRef}
+           ref={mobileCarouselRef}
             className="w-full overflow-x-auto scroll-smooth snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden pb-2 cursor-pointer"
           >
             <div className="flex gap-4 px-4">
@@ -297,6 +311,7 @@ export default function ImpactSection() {
                   key={item.code}
                   {...item}
                   cardClass="
+                   impact-scroll-card
                     flex-none snap-start
                     w-[190px] min-h-[170px] pl-5 pr-3 pb-1
                     [&_.card-line]:h-[170px]
