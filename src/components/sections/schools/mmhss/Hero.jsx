@@ -36,105 +36,105 @@ export default function Hero() {
   const lineRef = useRef(null);
 
   useEffect(() => {
-     requestAnimationFrame(() => {
-    const ctx = gsap.context(() => {
-      /* ── 1. Hero entrance timeline ── */
-      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+    requestAnimationFrame(() => {
+      const ctx = gsap.context(() => {
+        /* ── 1. Hero entrance timeline ── */
+        const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
-      // Background overlay fades in first
-      tl.fromTo(
-        overlayRef.current,
-        { opacity: 0 },
-        { opacity: 1, duration: 0.9 },
-      );
-
-      // Heading clip-path reveal (cinematic curtain up)
-      tl.fromTo(
-        headingRef.current,
-        { opacity: 0, y: 32 },
-        { opacity: 1, y: 0, duration: 0.9 },
-        "-=0.4",
-      );
-
-      // Badge slides in from left
-      tl.fromTo(
-        badgeRef.current,
-        { opacity: 0, x: -24 },
-        { opacity: 1, x: 0, duration: 0.7 },
-        "-=0.7",
-      );
-
-      // Subtext fades up
-      tl.fromTo(
-        subtextRef.current,
-        { opacity: 0, y: 18 },
-        { opacity: 1, y: 0, duration: 0.7 },
-        "-=0.4",
-      );
-
-      // Buttons rise up
-      tl.fromTo(
-        btnsRef.current,
-        { opacity: 0, y: 16 },
-        { opacity: 1, y: 0, duration: 0.6 },
-        "-=0.35",
-      );
-
-      // Right panel slides in from right with slight scale
-      tl.fromTo(
-        panelRef.current,
-        { opacity: 0, x: 36, scale: 0.98 },
-        { opacity: 1, x: 0, scale: 1, duration: 0.85, ease: "power2.out" },
-        "-=0.7",
-      );
-
-      // Accent line draws from left
-      tl.fromTo(
-        lineRef.current,
-        { scaleX: 0, transformOrigin: "left center" },
-        { scaleX: 1, duration: 0.5 },
-        "-=0.4",
-      );
-
-      // Quick-fact rows stagger in
-      const factItems = factsRef.current?.querySelectorAll(".fact-item");
-      if (factItems?.length) {
+        // Background overlay fades in first
         tl.fromTo(
-          factItems,
-          { opacity: 0, y: 12 },
-          { opacity: 1, y: 0, duration: 0.5, stagger: 0.12 },
+          overlayRef.current,
+          { opacity: 0 },
+          { opacity: 1, duration: 0.9 },
+        );
+
+        // Heading clip-path reveal (cinematic curtain up)
+        tl.fromTo(
+          headingRef.current,
+          { opacity: 0, y: 32 },
+          { opacity: 1, y: 0, duration: 0.9 },
+          "-=0.4",
+        );
+
+        // Badge slides in from left
+        tl.fromTo(
+          badgeRef.current,
+          { opacity: 0, x: -24 },
+          { opacity: 1, x: 0, duration: 0.7 },
+          "-=0.7",
+        );
+
+        // Subtext fades up
+        tl.fromTo(
+          subtextRef.current,
+          { opacity: 0, y: 18 },
+          { opacity: 1, y: 0, duration: 0.7 },
+          "-=0.4",
+        );
+
+        // Buttons rise up
+        tl.fromTo(
+          btnsRef.current,
+          { opacity: 0, y: 16 },
+          { opacity: 1, y: 0, duration: 0.6 },
           "-=0.35",
         );
-      }
 
-      /* ── 3. Stats reveal on scroll ── */
-      const statItems = statsRef.current?.querySelectorAll(".stat-item");
-      if (statItems?.length) {
-       gsap.fromTo(
-  statItems,
-  { y: 24, scale: 0.98 },
-  {
-    y: 0,
-    scale: 1,
-    duration: 0.6,
-    stagger: 0.1,
-    ease: "power2.out",
-    scrollTrigger: {
-      trigger: statsRef.current,
-      start: "top 92%",
-      once: true,
-    },
-  }
-);
-      }
-    }, sectionRef);
+        // Right panel slides in from right with slight scale
+        tl.fromTo(
+          panelRef.current,
+          { opacity: 0, x: 36, scale: 0.98 },
+          { opacity: 1, x: 0, scale: 1, duration: 0.85, ease: "power2.out" },
+          "-=0.7",
+        );
 
-    return () => {
-  ScrollTrigger.getAll().forEach((t) => t.kill());
-  ctx.revert();
-};
-  });
-}, []);
+        // Accent line draws from left
+        tl.fromTo(
+          lineRef.current,
+          { scaleX: 0, transformOrigin: "left center" },
+          { scaleX: 1, duration: 0.5 },
+          "-=0.4",
+        );
+
+        // Quick-fact rows stagger in
+        const factItems = factsRef.current?.querySelectorAll(".fact-item");
+        if (factItems?.length) {
+          tl.fromTo(
+            factItems,
+            { opacity: 0, y: 12 },
+            { opacity: 1, y: 0, duration: 0.5, stagger: 0.12 },
+            "-=0.35",
+          );
+        }
+
+        /* ── 3. Stats reveal on scroll ── */
+        const statItems = statsRef.current?.querySelectorAll(".stat-item");
+        if (statItems?.length) {
+          gsap.fromTo(
+            statItems,
+            { y: 24, scale: 0.98 },
+            {
+              y: 0,
+              scale: 1,
+              duration: 0.6,
+              stagger: 0.1,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: statsRef.current,
+                start: "top 92%",
+                once: true,
+              },
+            },
+          );
+        }
+      }, sectionRef);
+
+      return () => {
+        ScrollTrigger.getAll().forEach((t) => t.kill());
+        ctx.revert();
+      };
+    });
+  }, []);
 
   return (
     <section ref={sectionRef} className={`${shell} bg-[#F5EFE8] py-9`}>
@@ -186,7 +186,7 @@ export default function Hero() {
                   leading-[1.8] text-white/70 max-w-[560px]"
               >
                 <span className="text-white font-medium">
-                 Top 10 among 150 schools in Palakkad.
+                  Top 10 among 150 schools in Palakkad.
                 </span>
                 <br />
                 Over 300 students, built on academic transformation, structured
@@ -265,15 +265,15 @@ export default function Hero() {
           </div>
 
           {/* STATS */}
-          <div className="w-full border-t border-white/10 bg-[#0e0e0e] mt-auto">
-            <div className="max-w-[1400px] mx-auto">
+          <div className="w-full border-t border-white/10 bg-[#0e0e0e]">
+            <div className="max-w-[1400px] mx-auto ">
               <div ref={statsRef} className="grid grid-cols-2 md:grid-cols-4">
                 {STATS.map((item, i) => (
                   <div
                     key={i}
                     className={[
-                      "stat-item flex flex-col items-center font-rethink justify-center text-center",
-                      "py-10 sm:py-14 md:py-[60px] lg:py-[80px] px-4 sm:px-5",
+                      "stat-item flex flex-col items-center font-rethink justify-start text-center",
+                      "py-6 sm:py-8 md:py-[40px] lg:py-[50px] pb-[20px]",
                       i % 2 === 0 ? "border-r border-white/10" : "",
                       i < 2 ? "border-b border-white/10 md:border-b-0" : "",
                       i !== 3 ? "md:border-r md:border-white/10" : "",
@@ -281,8 +281,9 @@ export default function Hero() {
                       .filter(Boolean)
                       .join(" ")}
                   >
+                    <div className="-translate-y-0 md:-translate-y-1">
                     <h3
-                      className="font-serif text-[36px] sm:text-[44px] md:text-[56px] lg:text-[64px]
+                      className="font-rethink text-[36px] sm:text-[44px] md:text-[56px] lg:text-[64px]
                         text-[#eae6df] font-medium tracking-[-0.02em] leading-none"
                     >
                       {item.value}
@@ -294,6 +295,7 @@ export default function Hero() {
                         </span>
                       ))}
                     </p>
+                  </div>
                   </div>
                 ))}
               </div>

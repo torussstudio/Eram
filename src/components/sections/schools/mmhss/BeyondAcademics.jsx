@@ -131,8 +131,12 @@ export default function BeyondAcademics() {
   );
 
   return (
-    <section id="academics" ref={containerRef} className={`${shell} bg-[#F5EFE8]`}>
-      <div className="w-full max-w-[1300px] mx-auto px-5 sm:px-8 md:px-10 lg:px-16 py-16 md:py-20 lg:py-24">
+    <section
+  id="academics"
+  ref={containerRef}
+  className={`${shell} bg-[#F5EFE8] -mt-[60px] md:-mt-[80px]`}
+>
+      <div className="w-full max-w-[1300px] mx-auto px-5 sm:px-8 md:px-10 lg:px-16 py-10 md:py-14 lg:py-16">
 
         {/* ── HEADER ── */}
         <div className="anim-header-wrap grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-14 lg:mb-16">

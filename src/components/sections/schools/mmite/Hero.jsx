@@ -274,7 +274,7 @@ export default function Hero() {
                     key={i}
                     className={[
                       "stat-item flex flex-col items-center font-rethink justify-center text-center",
-                      "py-10 sm:py-14 md:py-[60px] lg:py-[80px] px-4 sm:px-5",
+                      "py-6 sm:py-8 md:py-[40px] lg:py-[50px]",
                       i % 2 === 0 ? "border-r border-white/10" : "",
                       i < 2 ? "border-b border-white/10 md:border-b-0" : "",
                       i !== 3 ? "md:border-r md:border-white/10" : "",
@@ -282,8 +282,9 @@ export default function Hero() {
                       .filter(Boolean)
                       .join(" ")}
                   >
+                     <div className="-translate-y-0 md:-translate-y-1">
                     <h3
-                      className="font-serif text-[36px] sm:text-[44px] md:text-[56px] lg:text-[64px]
+                      className="font-rethink text-[36px] sm:text-[44px] md:text-[56px] lg:text-[64px]
                         text-[#eae6df] font-medium tracking-[-0.02em] leading-none"
                     >
                       {item.value}
@@ -295,6 +296,7 @@ export default function Hero() {
                         </span>
                       ))}
                     </p>
+                  </div>
                   </div>
                 ))}
               </div>

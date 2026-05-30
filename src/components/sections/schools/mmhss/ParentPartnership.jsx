@@ -106,8 +106,11 @@ export default function ParentPartnership() {
   );
 
   return (
-    <section ref={containerRef} className={`${shell} bg-[#F5EFE8] overflow-hidden`}>
-      <div className="w-full max-w-[1300px] mx-auto px-5 sm:px-8 md:px-10 lg:px-16 py-16 md:py-20 lg:py-24">
+    <section
+  ref={containerRef}
+  className={`${shell} bg-[#F5EFE8] overflow-hidden -mt-[100px] md:-mt-[120px]`}
+>
+  <div className="w-full max-w-[1300px] mx-auto px-5 sm:px-8 md:px-10 lg:px-16 py-16 md:py-20 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center">
 
           {/* ── LEFT COLUMN ── */}

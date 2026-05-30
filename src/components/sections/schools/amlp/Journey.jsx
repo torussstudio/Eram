@@ -42,7 +42,7 @@ export default function Journey() {
   const lastParaRef = useRef(null);
   const subLabelRef = useRef(null);
   const timelineRef = useRef(null);
-  const spineRef = useRef(null); // ← single absolute spine
+  const spineRef = useRef(null); // 
 
   useEffect(() => {
     let resizeTimer;
