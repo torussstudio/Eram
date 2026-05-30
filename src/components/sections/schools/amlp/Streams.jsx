@@ -302,24 +302,15 @@ export default function AcademicStreams() {
       <div className="relative w-full min-h-[500px] lg:min-h-[720px] overflow-hidden rounded-[24px]">
   
   {/* Top Logo Section */}
-  <div className="relative h-[42%] w-full overflow-hidden">
-    <img
-      src="/images/logo-bg.avif"
-      alt="Logo Background"
-      className="w-full h-full object-cover"
-    />
+  <div className="relative h-[42%] w-full overflow-hidden bg-[#111] flex items-center justify-center p-4">
+  <img
+    src="/images/amlpp.avif"
+    alt="Logo Background"
+    className="w-[92%] h-[92%] object-contain"
+  />
 
-    <div className="absolute inset-0 bg-black/10" />
-
-    {/* Center Logo */}
-    <div className="absolute inset-0 flex items-center justify-center z-10">
-      <img
-        src="/images/logo.png"
-        alt="School Logo"
-        className="w-[120px] lg:w-[160px] object-contain"
-      />
-    </div>
-  </div>
+  <div className="absolute inset-0 bg-black/10" />
+</div>
 
   {/* Bottom School Image */}
   <div className="relative h-[58%] w-full overflow-hidden">
