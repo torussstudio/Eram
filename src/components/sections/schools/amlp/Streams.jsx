@@ -315,7 +315,7 @@ export default function AcademicStreams() {
   {/* Bottom School Image */}
   <div className="relative h-[58%] w-full overflow-hidden">
     <img
-      src="/images/mmps.webp"
+      src="/images/amlp.avif"
       alt="Academic Structure"
       className="w-full h-full object-cover"
     />
