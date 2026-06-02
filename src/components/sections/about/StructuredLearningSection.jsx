@@ -299,6 +299,8 @@ function StructuredLearningSection() {
           ))}
         </div>
 
+        <div className="my-12 md:my-16 border-t border-white/40" />
+
         {/* BOTTOM TEXT + LIST */}
         <div className="leadership-bottom-text mt-12 md:mt-14 grid md:grid-cols-2 gap-6 md:gap-10 items-start">
           <p className="leadership-bottom-heading md:opacity-0 md:translate-y-5 text-[1.08rem] md:text-[18px] font-medium text-white ml-0 md:ml-22">

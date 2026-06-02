@@ -9,35 +9,36 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 
 const institutions = [
-  {
-    type: "LP School",
-    name: "AMLP",
-    desc: "Aided Mappila LP School",
-    path: "/amlp",
+   {
+    type: "CBSE School",
+    name: "EASE",
+    desc: "ERAM Academy for Sports & Excellence",
+    path: "https://ease.edu.in/",
   },
-  {
+   {
     type: "High School",
     name: "MMPS",
     desc: "Mariyumma Memorial Public School",
     path: "/mmps",
   },
-  {
+ 
+   {
     type: "Higher Secondary",
     name: "MMHSS",
     desc: "Mariyumma Memorial Hr. Sec. School",
     path: "/mmhss",
   },
   {
-    type: "CBSE School",
-    name: "EASE",
-    desc: "ERAM Academy for Sports & Excellence",
-    path: "https://ease.edu.in/",
-  },
-  {
     type: "Teacher Training",
     name: "MMITE",
     desc: "Mariyumma Memorial Institute of Teacher Ed.",
     path: "/mmite",
+  },
+   {
+    type: "LP School",
+    name: "AMLP",
+    desc: "Aided Mappila LP School",
+    path: "/amlp",
   },
 ];
 

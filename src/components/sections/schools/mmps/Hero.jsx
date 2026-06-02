@@ -11,13 +11,13 @@ gsap.registerPlugin(ScrollTrigger);
 const QUICK_FACTS = [
   ["2004", "Year Established"],
   ["State Board", "Curriculum · English Medium"],
-  ["450+", "Student Strength"],
+  ["750+", "Student Strength"],
   ["14 Yrs", "100% Pass Rate"],
 ];
 
 const STATS = [
   { value: "14", desc: ["Consecutive Years", "100% Pass Rate"] },
-  { value: "450+", desc: ["Students Currently", "Enrolled"] },
+  { value: "750+", desc: ["Students Currently", "Enrolled"] },
   { value: "20+", desc: ["Years of" ,"Continuous Operation"] },
   { value: "5+", desc: ["National & State Level","Sports Selections"] },
 ];
@@ -189,7 +189,7 @@ export default function Hero() {
                   20+ years of operation. 100% pass rate.
                 </span>
                 <br />
-              Over 450 students, built on structured academic systems, early competitive sports exposure, and consistent communication — achieving 100% pass results for 14 consecutive years.
+              Over 750 students, built on structured academic systems, early competitive sports exposure, and consistent communication — achieving 100% pass results for 14 consecutive years.
               </p>
 
               <div ref={btnsRef} className="flex flex-wrap gap-3 mt-6 sm:mt-7">
