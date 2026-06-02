@@ -237,7 +237,7 @@ export default function AcademicStreams() {
           {/* ══ RIGHT COLUMN ═══════════════════════════════════ */}
           <div
             ref={principalRef}
-            className="group relative overflow-hidden mt-6 lg:mt-12 rounded-[28px] h-[350px] md:h-[450px] border border-white/10"
+            className="group relative overflow-hidden rounded-[28px] h-[380px] md:h-[420px] mt-[50px] border border-white/10"
           >
             {/* Principal Image */}
             <img
@@ -250,7 +250,13 @@ export default function AcademicStreams() {
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/10" />
 
             {/* Static Content */}
-            <div className="absolute top-0 left-0 w-full p-8 md:p-10 z-20">
+            <div
+              className="
+    absolute bottom-0 left-0 w-full p-8 md:p-10 z-20
+    transition-all duration-700
+    group-hover:bottom-40
+  "
+            >
               <p className="font-rethink text-[11px] tracking-[0.28em] text-[#ae1431] uppercase mb-6">
                 Our Principal
               </p>
@@ -267,7 +273,7 @@ export default function AcademicStreams() {
             </div>
 
             {/* Hover Reveal */}
-            <div className="absolute inset-0 flex items-end p-8 md:p-10 opacity-0 group-hover:opacity-100 transition-all duration-500 z-30">
+            <div className="absolute inset-0 flex items-end p-8 md:p-10 opacity-0 group-hover:opacity-100 transition-all duration-500 z-30 pointer-events-none">
               <div className="translate-y-10 group-hover:translate-y-0 transition-all duration-500">
                 <div className="w-12 h-[2px] bg-[#ae1431] mb-6" />
 

@@ -326,6 +326,16 @@ group-hover:scale-[1.02]
 "
       />
 
+      <div
+  className="
+    absolute inset-0 z-[1]
+    bg-gradient-to-t
+    from-black/80
+    via-black/35
+    to-black/20
+  "
+/>
+
       {/* Content */}
       <div className="relative z-[3] flex h-full flex-col justify-between px-[clamp(18px,3vw,30px)] py-[clamp(18px,3vw,28px)] max-[640px]:px-[20px] max-[640px]:py-[18px]">
         {/* Code */}

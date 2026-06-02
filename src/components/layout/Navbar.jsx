@@ -87,14 +87,29 @@ className="absolute bottom-0 left-0 h-[2.5px] w-full rounded-full will-change-tr
       >
         <div className="absolute -top-[6px] left-1/2 -translate-x-1/2 w-[12px] h-[12px] bg-white rotate-45 border-l border-t border-black/[0.06]" />
         <div className="p-2">
-          {institutions.map((inst) => (
+         {institutions.map((inst) => {
+  const isCurrentInstitution =
+    !inst.path.startsWith("http") &&
+    location.pathname === inst.path;
+
+  return (
             <button
               key={inst.title}
               onClick={() => {
                 setOpen(false);
                 onItemClick(inst.path);
               }}
-              className="w-full flex items-center gap-3 px-3 py-[9px] rounded-[12px] hover:bg-[#F5EFE8] transition-colors duration-150 text-left group"
+              className={`
+  w-full flex items-center gap-3 px-3 py-[9px]
+  rounded-[12px]
+  text-left group
+  transition-all duration-200
+  ${
+    isCurrentInstitution
+      ? "bg-[#F5EFE8]"
+      : "hover:bg-[#F5EFE8]"
+  }
+`}
             >
               <div className="w-[46px] h-[34px] rounded-[8px] overflow-hidden shrink-0 bg-black/5">
                 <img
@@ -103,7 +118,20 @@ className="absolute bottom-0 left-0 h-[2.5px] w-full rounded-full will-change-tr
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
-              <span className="text-[0.85rem] font-semibold text-[#111] tracking-[0.02em] flex-1">
+              <span
+  className={`
+    text-[0.85rem]
+    font-semibold
+    tracking-[0.02em]
+    flex-1
+    transition-colors duration-200
+    ${
+      isCurrentInstitution
+        ? "text-[#ae1431]"
+        : "text-[#111]"
+    }
+  `}
+>
                 {inst.title}
               </span>
               <svg
@@ -111,7 +139,15 @@ className="absolute bottom-0 left-0 h-[2.5px] w-full rounded-full will-change-tr
                 height="14"
                 viewBox="0 0 14 14"
                 fill="none"
-                className="text-[#aaa] group-hover:text-[#ae1431] transition-colors duration-150 shrink-0"
+               className={`
+  shrink-0
+  transition-colors duration-150
+  ${
+    isCurrentInstitution
+      ? "text-[#ae1431]"
+      : "text-[#aaa] group-hover:text-[#ae1431]"
+  }
+`}
               >
                 <path
                   d="M3 7h8M7.5 4l3.5 3-3.5 3"
@@ -122,7 +158,8 @@ className="absolute bottom-0 left-0 h-[2.5px] w-full rounded-full will-change-tr
                 />
               </svg>
             </button>
-          ))}
+          );
+})}
         </div>
       </div>
     </div>
