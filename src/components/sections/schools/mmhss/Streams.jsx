@@ -280,7 +280,7 @@ export default function AcademicStreams() {
   }, []);
 
   return (
-    <section ref={sectionRef} className={`${shell} bg-[#1a1a1a] relative overflow-hidden`}>
+    <section ref={sectionRef} className={`${shell} bg-[#1a1a1a]  relative overflow-hidden`}>
 
       {/* Ambient red glow — top left */}
       <div
@@ -329,7 +329,7 @@ export default function AcademicStreams() {
 
             {/* Badge */}
             <div ref={badgeRef} className="flex items-center gap-3 mb-8">
-              <p className="font-rethink text-[10px]  sm:text-[11px] tracking-[0.28em] text-[#ae1431] uppercase font-bold">
+              <p className="font-rethink text-[13px]  sm:text-[14px] tracking-[0.28em] text-[#ae1431] uppercase font-bold">
                 Academic Structure
               </p>
             </div>

@@ -20,28 +20,28 @@ const messages = [
     emoji: "🎓",
     tag: "KTET Result",
     text: "45 out of 53 students cleared KTET 2025. Congratulations to this batch — results reflect structured preparation and discipline.",
-    meta: "Recent · Academic Outcomes",
+    meta: "01-05-2026 · Academic Outcomes",
     accent: true,
   },
   {
     emoji: "📋",
     tag: "Practice Teaching",
     text: "Semester 3 teaching assignments begin Monday. Schedule shared with all students.",
-    meta: "Today · 8:00 AM · Academic Coordination",
+    meta: "21-04-2026 · Academic Coordination",
     accent: false,
   },
   {
     emoji: "🏕️ ",
     tag: "Residential Camp",
     text: "15-day leadership camp confirmed for December. Attendance mandatory for all enrolled students.",
-    meta: "Yesterday · 4:00 PM · Programme Coordination",
+    meta: "21-03-2026 · Programme Coordination",
     accent: true,
   },
   {
     emoji: "📰",
     tag: " Magazine",
     text: "MMITE's annual printed magazine submissions open. All students encouraged to contribute.",
-    meta: "2 days ago · Editorial Team",
+    meta: "26-04-2026 · Editorial Team",
     accent: false,
   },
 ];
@@ -198,6 +198,9 @@ export default function ParentPartnership() {
                   className={`anim-msg bg-[#242424] rounded-[5px] px-4 py-4
                     ${msg.accent ? "border-l-[3px] border-[#ae1431]" : "border-l-[3px] border-transparent"}`}
                 >
+                   <p className="inline-flex items-center px-3 py-1 text-[11px] bg-[#1f1f1f] border border-[#2d2d2d] rounded-full text-[#c8c0b8] tracking-[0.02em] mb-2">
+                    {msg.meta}
+                  </p>
                   <p className="text-[13px] sm:text-[14px] text-[#c8c0b8] leading-[1.65]">
                     <span className="mr-1">{msg.emoji}</span>
                     <span className="font-semibold text-white">
@@ -205,9 +208,7 @@ export default function ParentPartnership() {
                     </span>{" "}
                     {msg.text}
                   </p>
-                  <p className="text-[11px] text-[#5e554e] mt-2 tracking-[0.02em]">
-                    {msg.meta}
-                  </p>
+                 
                 </div>
               ))}
             </div>

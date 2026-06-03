@@ -16,7 +16,7 @@ const QUICK_FACTS = [
 ];
 
 const STATS = [
-  { value: "21", desc: ["Consecutive Years", "100% Pass Rate"] },
+  { value: "98%", desc: ["Pass rate", "2026"] },
   { value: "450+", desc: ["Students Currently", "Enrolled"] },
   { value: "14", desc: ["Among 150 Schools", "in Palakkad District"] },
   { value: "3", desc: ["Higher Secondary", "Academic Streams"] },

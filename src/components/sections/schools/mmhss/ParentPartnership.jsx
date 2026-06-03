@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import {gsap} from "gsap";
+import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import { shell } from "../../../../constants/homeStyles";
@@ -18,28 +18,28 @@ const messages = [
     emoji: "📋",
     tag: "Academic Update",
     text: "Grade 11 Commerce — Unit Test 3 results uploaded. Average: 78%. 4 students flagged for additional support.",
-    meta: "Today · 8:42 AM · Academic Monitoring",
+    meta: "12-03-2026 · Academic Monitoring",
     accent: true,
   },
   {
     emoji: "✅",
     tag: "Attendance",
     text: "Your ward was present today. Morning study session attendance: 100%.",
-    meta: "Today · 7:05 AM · Attendance System",
+    meta: "20-02026 · Attendance System",
     accent: false,
   },
   {
     emoji: "📣",
     tag: "Notice",
     text: "Crash course for Biology Practical begins Monday. Attendance mandatory for all Grade 12 students.",
-    meta: "Yesterday · 5:30 PM · Biology Dept.",
+    meta: "10-03-2026n· 5:30 PM · Biology Dept.",
     accent: true,
   },
   {
     emoji: "🏆",
     tag: "Recognition",
     text: "Diya Maryam (Gr. 11) — National Level Wushu Championship. 1st Place. Congratulations!",
-    meta: "2 days ago · School Management",
+    meta: "14-02-2026 · School Management",
     accent: false,
   },
 ];
@@ -59,12 +59,16 @@ export default function ParentPartnership() {
           ".anim-quote",
           ".anim-btn",
         ],
-        { opacity: 0, y: 20 }
+        { opacity: 0, y: 20 },
       );
-      gsap.set(".anim-divider",       { opacity: 0, scaleX: 0, transformOrigin: "left center" });
-      gsap.set(".anim-mockup",        { opacity: 0, y: 32 });
+      gsap.set(".anim-divider", {
+        opacity: 0,
+        scaleX: 0,
+        transformOrigin: "left center",
+      });
+      gsap.set(".anim-mockup", { opacity: 0, y: 32 });
       gsap.set(".anim-mockup-header", { opacity: 0 });
-      gsap.set(".anim-msg",           { opacity: 0, y: 14 });
+      gsap.set(".anim-msg", { opacity: 0, y: 14 });
 
       const trigger = {
         trigger: containerRef.current,
@@ -81,12 +85,20 @@ export default function ParentPartnership() {
 
       leftTl
         .to(".anim-subtitle", { opacity: 1, y: 0, duration: 0.45 })
-        .to(".anim-title",    { opacity: 1, y: 0, duration: 0.65 }, "-=0.15")
-        .to(".anim-divider",  { opacity: 1, scaleX: 1, duration: 0.55, ease: "power2.inOut" }, "-=0.2")
-        .to(".anim-desc",     { opacity: 1, y: 0, duration: 0.55 }, "-=0.25")
-        .to(".anim-bullet",   { opacity: 1, y: 0, duration: 0.45, stagger: 0.08 }, "-=0.25")
-        .to(".anim-quote",    { opacity: 1, y: 0, duration: 0.5 }, "-=0.1")
-        .to(".anim-btn",      { opacity: 1, y: 0, duration: 0.45 }, "-=0.2");
+        .to(".anim-title", { opacity: 1, y: 0, duration: 0.65 }, "-=0.15")
+        .to(
+          ".anim-divider",
+          { opacity: 1, scaleX: 1, duration: 0.55, ease: "power2.inOut" },
+          "-=0.2",
+        )
+        .to(".anim-desc", { opacity: 1, y: 0, duration: 0.55 }, "-=0.25")
+        .to(
+          ".anim-bullet",
+          { opacity: 1, y: 0, duration: 0.45, stagger: 0.08 },
+          "-=0.25",
+        )
+        .to(".anim-quote", { opacity: 1, y: 0, duration: 0.5 }, "-=0.1")
+        .to(".anim-btn", { opacity: 1, y: 0, duration: 0.45 }, "-=0.2");
 
       const rightTl = gsap.timeline({
         defaults: { ease: "power3.out" },
@@ -94,25 +106,29 @@ export default function ParentPartnership() {
       });
 
       rightTl
-        .to(".anim-mockup",        { opacity: 1, y: 0, duration: 0.7 }, 0.3)
-        .to(".anim-mockup-header", { opacity: 1, duration: 0.4 },       "-=0.2")
-        .to(".anim-msg", {
-            opacity: 1, y: 0,
+        .to(".anim-mockup", { opacity: 1, y: 0, duration: 0.7 }, 0.3)
+        .to(".anim-mockup-header", { opacity: 1, duration: 0.4 }, "-=0.2")
+        .to(
+          ".anim-msg",
+          {
+            opacity: 1,
+            y: 0,
             duration: 0.45,
-            stagger: 0.09,        // messages trickle like a live feed
-          }, "-=0.15");
+            stagger: 0.09, // messages trickle like a live feed
+          },
+          "-=0.15",
+        );
     },
-    { scope: containerRef }
+    { scope: containerRef },
   );
 
   return (
     <section
-  ref={containerRef}
-  className={`${shell} bg-[#F5EFE8] overflow-hidden -mt-[100px] md:-mt-[120px]`}
->
-  <div className="w-full max-w-[1300px] mx-auto px-5 sm:px-8 md:px-10 lg:px-16 py-16 md:py-20 lg:py-24">
+      ref={containerRef}
+      className={`${shell} bg-[#F5EFE8] overflow-hidden -mt-[100px] md:-mt-[120px]`}
+    >
+      <div className="w-full max-w-[1300px] mx-auto px-5 sm:px-8 md:px-10 lg:px-16 py-16 md:py-20 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center">
-
           {/* ── LEFT COLUMN ── */}
           <div className="flex flex-col">
             <div className="anim-subtitle flex items-center gap-3 mb-8">
@@ -121,10 +137,14 @@ export default function ParentPartnership() {
               </p>
             </div>
 
-            <h2 className="font-display anim-title text-[#1a1209] leading-[1.05] tracking-[-0.02em]
-  text-[26px] sm:text-[30px] md:text-[28px] lg:text-[32px] xl:text-[36px]">
-  Discipline &amp; Communication<br />as Accountability
-</h2>
+            <h2
+              className="font-display anim-title text-[#1a1209] leading-[1.05] tracking-[-0.02em]
+  text-[26px] sm:text-[30px] md:text-[28px] lg:text-[32px] xl:text-[36px]"
+            >
+              Discipline &amp; Communication
+              <br />
+              as Accountability
+            </h2>
 
             <div className="anim-divider w-10 h-[2px] bg-[#ae1431] mt-6 mb-8" />
 
@@ -151,8 +171,10 @@ export default function ParentPartnership() {
             </p>
 
             <div className="mt-8 anim-btn">
-              <button className="font-rethink bg-[#1a1209] text-white text-[11px] sm:text-[12px] tracking-[0.14em] uppercase
-                px-7 py-4 flex items-center gap-3 cursor-pointer hover:bg-[#2e2318] transition-colors duration-200 rounded-[10px]">
+              <button
+                className="font-rethink bg-[#1a1209] text-white text-[11px] sm:text-[12px] tracking-[0.14em] uppercase
+                px-7 py-4 flex items-center gap-3 cursor-pointer hover:bg-[#2e2318] transition-colors duration-200 rounded-[10px]"
+              >
                 Access Parent Portal
                 <span className="text-[15px]">→</span>
               </button>
@@ -174,19 +196,20 @@ export default function ParentPartnership() {
                   className={`anim-msg bg-[#242424] rounded-[5px] px-4 py-4
                     ${msg.accent ? "border-l-[3px] border-[#ae1431]" : "border-l-[3px] border-transparent"}`}
                 >
+                  <p className="inline-flex items-center px-3 py-1 text-[11px] bg-[#1f1f1f] border border-[#2d2d2d] rounded-full text-[#c8c0b8] tracking-[0.02em] mb-2">
+                    {msg.meta}
+                  </p>
                   <p className="text-[13px] sm:text-[14px] text-[#c8c0b8] leading-[1.65]">
                     <span className="mr-1">{msg.emoji}</span>
-                    <span className="font-semibold text-white">{msg.tag}:</span>{" "}
+                    <span className="font-semibold text-white">
+                      {msg.tag}:
+                    </span>{" "}
                     {msg.text}
-                  </p>
-                  <p className="text-[11px] text-[#5e554e] mt-2 tracking-[0.02em]">
-                    {msg.meta}
                   </p>
                 </div>
               ))}
             </div>
           </div>
-
         </div>
       </div>
     </section>

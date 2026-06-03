@@ -330,7 +330,7 @@ export default function AcademicStreams() {
 
             {/* Badge */}
             <div ref={badgeRef} className="flex items-center gap-3 mb-8">
-              <p className="font-rethink text-[10px] sm:text-[11px] tracking-[0.28em] text-[#ae1431] uppercase font-medium">
+              <p className="font-rethink text-[13px] sm:text-[14px] tracking-[0.28em] text-[#ae1431] uppercase font-medium">
                 Academic Structure
               </p>
             </div>

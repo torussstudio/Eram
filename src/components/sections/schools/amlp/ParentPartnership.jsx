@@ -20,28 +20,28 @@ const messages = [
     emoji: "📋",
     tag: "Academic Update",
     text: "Grade 3 formative assessment completed. Progress reports will be shared by Friday.",
-    meta: "Today · 8:30 AM · Academic Monitoring",
+    meta: "03-06-2026 · Academic Monitoring",
     accent: true,
   },
   {
     emoji: "✅",
     tag: "Attendance",
     text: "Your ward was present today. School hours: 9:00 AM – 3:30 PM.",
-    meta: "Today · 7:00 AM · Attendance System",
+    meta: "03-06-2026 · Attendance System",
     accent: false,
   },
   {
     emoji: "📣",
     tag: "Notice",
     text: " School Annual Day celebrations scheduled for next Friday. All parents warmly invited.",
-    meta: "Yesterday · 5:30 PM · Schoo, Management.",
+    meta: "28-05-2026 · School, Management.",
     accent: true,
   },
   {
     emoji: "🏆",
     tag: "Activity",
     text: " Art & craft activity session completed for Grade 1 & 2 — photos shared in gallery.",
-    meta: "2 days ago · Class Teacher",
+    meta: "20-05-2026 · Class Teacher",
     accent: false,
   },
 ];
@@ -178,13 +178,13 @@ export default function ParentPartnership() {
                   className={`anim-msg bg-[#242424] rounded-[5px] px-4 py-4
                     ${msg.accent ? "border-l-[3px] border-[#ae1431]" : "border-l-[3px] border-transparent"}`}
                 >
+                   <p className="inline-flex items-center px-3 py-1 text-[11px] bg-[#1f1f1f] border border-[#2d2d2d] rounded-full text-[#c8c0b8] tracking-[0.02em] mb-2">
+                    {msg.meta}
+                  </p>
                   <p className="text-[13px] sm:text-[14px] text-[#c8c0b8] leading-[1.65]">
                     <span className="mr-1">{msg.emoji}</span>
                     <span className="font-semibold text-white">{msg.tag}:</span>{" "}
                     {msg.text}
-                  </p>
-                  <p className="text-[11px] text-[#5e554e] mt-2 tracking-[0.02em]">
-                    {msg.meta}
                   </p>
                 </div>
               ))}

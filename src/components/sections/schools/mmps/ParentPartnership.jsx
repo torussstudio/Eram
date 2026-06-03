@@ -22,28 +22,28 @@ const messages = [
     emoji: "📋",
     tag: " Sports Update",
     text: "Mohammed Sinan (Gr. 10) has been officially selected to the FIFA Talent Academy, Odisha. Congratulations!",
-    meta: "Today · 9:15 AM · Sports Development",
+    meta: "30-05-2026· Sports Development",
     accent: true,
   },
   {
     emoji: "✅",
     tag: "Attendance",
     text: "Your ward was present today. Morning study session attendance: 100%.",
-    meta: "Today · 7:05 AM · Attendance System",
+    meta: "03-04-2026 · Attendance System",
     accent: false,
   },
   {
     emoji: "📣",
     tag: " Shreshtta Initiative",
     text: "Grade 8 classroom performance review completed. Results shared with respective parents.",
-    meta: "Yesterday · 4:30 PM · Academic Monitoring",
+    meta: "01-04-2026· Academic Monitoring",
     accent: true,
   },
   {
     emoji: "🏆",
     tag: "Recognition",
     text: "Fathima Mehrin (Gr. 7) — Gold Medal, 4th Kerala State Sambo Championship 2026!",
-    meta: "2 days ago · School Management",
+    meta: "21-03-2026 · School Management",
     accent: false,
   },
 ];
@@ -179,14 +179,15 @@ Monitoring &amp; Coordination
                   className={`anim-msg bg-[#242424] rounded-[5px] px-4 py-4
                     ${msg.accent ? "border-l-[3px] border-[#ae1431]" : "border-l-[3px] border-transparent"}`}
                 >
+                   <p className="inline-flex items-center px-3 py-1 text-[11px] bg-[#1f1f1f] border border-[#2d2d2d] rounded-full text-[#c8c0b8] tracking-[0.02em] mb-2">
+                    {msg.meta}
+                  </p>
                   <p className="text-[13px] sm:text-[14px] text-[#c8c0b8] leading-[1.65]">
                     <span className="mr-1">{msg.emoji}</span>
                     <span className="font-semibold text-white">{msg.tag}:</span>{" "}
                     {msg.text}
                   </p>
-                  <p className="text-[11px] text-[#5e554e] mt-2 tracking-[0.02em]">
-                    {msg.meta}
-                  </p>
+                  
                 </div>
               ))}
             </div>
