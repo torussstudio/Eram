@@ -27,66 +27,226 @@ const StudentParentPortal = () => {
 
   const notices = {
     AMLP: [
-      { id: 1, title: "Summer Vacation Schedule 2026-27", date: "May 15, 2026", category: "Academic" },
-      { id: 2, title: "Annual Sports Day Registration Open", date: "May 12, 2026", category: "Events" },
-      { id: 3, title: "New Library Resources Available", date: "May 10, 2026", category: "Academic" },
+      {
+        id: 1,
+        title: "Summer Vacation Schedule 2026-27",
+        date: "May 15, 2026",
+        category: "Academic",
+      },
+      {
+        id: 2,
+        title: "Annual Sports Day Registration Open",
+        date: "May 12, 2026",
+        category: "Events",
+      },
+      {
+        id: 3,
+        title: "New Library Resources Available",
+        date: "May 10, 2026",
+        category: "Academic",
+      },
     ],
     MMPS: [
-      { id: 1, title: "Final Exam Schedule Released", date: "May 18, 2026", category: "Examination" },
-      { id: 2, title: "Science Fair - Project Submission Deadline", date: "May 20, 2026", category: "Events" },
-      { id: 3, title: "Parent-Teacher Meeting Schedule", date: "May 16, 2026", category: "Administrative" },
+      {
+        id: 1,
+        title: "Final Exam Schedule Released",
+        date: "May 18, 2026",
+        category: "Examination",
+      },
+      {
+        id: 2,
+        title: "Science Fair - Project Submission Deadline",
+        date: "May 20, 2026",
+        category: "Events",
+      },
+      {
+        id: 3,
+        title: "Parent-Teacher Meeting Schedule",
+        date: "May 16, 2026",
+        category: "Administrative",
+      },
     ],
     MMHSS: [
-      { id: 1, title: "Board Exam Results Declaration", date: "May 25, 2026", category: "Examination" },
-      { id: 2, title: "College Counseling Sessions Begin", date: "May 19, 2026", category: "Academics" },
-      { id: 3, title: "Inter-School Cultural Competition", date: "May 22, 2026", category: "Events" },
+      {
+        id: 1,
+        title: "Board Exam Results Declaration",
+        date: "May 25, 2026",
+        category: "Examination",
+      },
+      {
+        id: 2,
+        title: "College Counseling Sessions Begin",
+        date: "May 19, 2026",
+        category: "Academics",
+      },
+      {
+        id: 3,
+        title: "Inter-School Cultural Competition",
+        date: "May 22, 2026",
+        category: "Events",
+      },
     ],
     EASE: [
-      { id: 1, title: "CBSE Unit Test Schedule", date: "May 17, 2026", category: "Examination" },
-      { id: 2, title: "Field Trip - Science Museum Visit", date: "May 21, 2026", category: "Events" },
-      { id: 3, title: "Mid-term Assessment Results", date: "May 14, 2026", category: "Academic" },
+      {
+        id: 1,
+        title: "CBSE Unit Test Schedule",
+        date: "May 17, 2026",
+        category: "Examination",
+      },
+      {
+        id: 2,
+        title: "Field Trip - Science Museum Visit",
+        date: "May 21, 2026",
+        category: "Events",
+      },
+      {
+        id: 3,
+        title: "Mid-term Assessment Results",
+        date: "May 14, 2026",
+        category: "Academic",
+      },
     ],
     MMITE: [
-      { id: 1, title: "Teacher Training Module 3 Begins", date: "May 20, 2026", category: "Training" },
-      { id: 2, title: "WHO Certification Workshop", date: "May 23, 2026", category: "Professional" },
-      { id: 3, title: "Practicum Placement Schedules", date: "May 16, 2026", category: "Academic" },
+      {
+        id: 1,
+        title: "Teacher Training Module 3 Begins",
+        date: "May 20, 2026",
+        category: "Training",
+      },
+      {
+        id: 2,
+        title: "WHO Certification Workshop",
+        date: "May 23, 2026",
+        category: "Professional",
+      },
+      {
+        id: 3,
+        title: "Practicum Placement Schedules",
+        date: "May 16, 2026",
+        category: "Academic",
+      },
     ],
   };
 
   const resources = {
     AMLP: [
-      { id: 1, title: "Mathematics Study Materials - Grade 3", type: "Study Material", size: "2.4 MB" },
-      { id: 2, title: "English Language Arts Guide", type: "Study Material", size: "1.8 MB" },
-      { id: 3, title: "Science Activity Worksheets", type: "Worksheet", size: "3.1 MB" },
+      {
+        id: 1,
+        title: "Mathematics Study Materials - Grade 3",
+        type: "Study Material",
+        size: "2.4 MB",
+      },
+      {
+        id: 2,
+        title: "English Language Arts Guide",
+        type: "Study Material",
+        size: "1.8 MB",
+      },
+      {
+        id: 3,
+        title: "Science Activity Worksheets",
+        type: "Worksheet",
+        size: "3.1 MB",
+      },
     ],
     MMPS: [
-      { id: 1, title: "Previous Year Math Question Papers 2024", type: "Question Paper", size: "4.2 MB" },
-      { id: 2, title: "Physics Lab Manual", type: "Study Material", size: "2.7 MB" },
-      { id: 3, title: "History Notes and Summaries", type: "Study Material", size: "1.9 MB" },
-      { id: 4, title: "Chemistry Practice Problems", type: "Worksheet", size: "2.1 MB" },
+      {
+        id: 1,
+        title: "Previous Year Math Question Papers 2024",
+        type: "Question Paper",
+        size: "4.2 MB",
+      },
+      {
+        id: 2,
+        title: "Physics Lab Manual",
+        type: "Study Material",
+        size: "2.7 MB",
+      },
+      {
+        id: 3,
+        title: "History Notes and Summaries",
+        type: "Study Material",
+        size: "1.9 MB",
+      },
+      {
+        id: 4,
+        title: "Chemistry Practice Problems",
+        type: "Worksheet",
+        size: "2.1 MB",
+      },
     ],
     MMHSS: [
-      { id: 1, title: "JEE Main Previous Year Papers", type: "Question Paper", size: "5.8 MB" },
-      { id: 2, title: "Biology Revision Notes", type: "Study Material", size: "3.4 MB" },
-      { id: 3, title: "Economics Case Studies", type: "Study Material", size: "2.2 MB" },
-      { id: 4, title: "English Literature Summary", type: "Study Material", size: "1.6 MB" },
+      {
+        id: 1,
+        title: "JEE Main Previous Year Papers",
+        type: "Question Paper",
+        size: "5.8 MB",
+      },
+      {
+        id: 2,
+        title: "Biology Revision Notes",
+        type: "Study Material",
+        size: "3.4 MB",
+      },
+      {
+        id: 3,
+        title: "Economics Case Studies",
+        type: "Study Material",
+        size: "2.2 MB",
+      },
+      {
+        id: 4,
+        title: "English Literature Summary",
+        type: "Study Material",
+        size: "1.6 MB",
+      },
     ],
     EASE: [
-      { id: 1, title: "CBSE Sample Papers 2026", type: "Question Paper", size: "6.1 MB" },
-      { id: 2, title: "Mathematics Formula Sheet", type: "Study Material", size: "1.2 MB" },
-      { id: 3, title: "Social Science Project Guidelines", type: "Worksheet", size: "2.8 MB" },
+      {
+        id: 1,
+        title: "CBSE Sample Papers 2026",
+        type: "Question Paper",
+        size: "6.1 MB",
+      },
+      {
+        id: 2,
+        title: "Mathematics Formula Sheet",
+        type: "Study Material",
+        size: "1.2 MB",
+      },
+      {
+        id: 3,
+        title: "Social Science Project Guidelines",
+        type: "Worksheet",
+        size: "2.8 MB",
+      },
     ],
     MMITE: [
-      { id: 1, title: "Curriculum Design Framework", type: "Course Material", size: "3.9 MB" },
-      { id: 2, title: "Assessment Methods Guide", type: "Study Material", size: "2.3 MB" },
-      { id: 3, title: "WHO Teacher Training Modules", type: "Course Material", size: "7.2 MB" },
+      {
+        id: 1,
+        title: "Curriculum Design Framework",
+        type: "Course Material",
+        size: "3.9 MB",
+      },
+      {
+        id: 2,
+        title: "Assessment Methods Guide",
+        type: "Study Material",
+        size: "2.3 MB",
+      },
+      {
+        id: 3,
+        title: "WHO Teacher Training Modules",
+        type: "Course Material",
+        size: "7.2 MB",
+      },
     ],
   };
 
   const filteredResources = resources[selectedInstitution].filter(
     (r) =>
       r.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      r.type.toLowerCase().includes(searchQuery.toLowerCase())
+      r.type.toLowerCase().includes(searchQuery.toLowerCase()),
   );
 
   const categoryColors = {
@@ -100,15 +260,18 @@ const StudentParentPortal = () => {
   };
 
   const resourceIcons = {
-    "Question Paper": <FileQuestion className="text-red-700 shrink-0" size={22} />,
+    "Question Paper": (
+      <FileQuestion className="text-red-700 shrink-0" size={22} />
+    ),
     "Study Material": <BookOpen className="text-blue-700 shrink-0" size={22} />,
-    "Worksheet": <FileText className="text-green-700 shrink-0" size={22} />,
-    "Course Material": <FileText className="text-purple-700 shrink-0" size={22} />,
+    Worksheet: <FileText className="text-green-700 shrink-0" size={22} />,
+    "Course Material": (
+      <FileText className="text-purple-700 shrink-0" size={22} />
+    ),
   };
 
   return (
     <div className="min-h-screen bg-[#F5EFE8] ">
-
       {/* ── Hero ── */}
       <section className="py-10 sm:py-14">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -124,8 +287,9 @@ const StudentParentPortal = () => {
                 Structured Access. Centralised Communication.
               </p>
               <p className="text-sm font-rethink sm:text-base text-gray-600 leading-relaxed mb-6">
-                Centralised access for fees, academic updates, institutional resources,
-                and administrative information for students and parents across the ERAM ecosystem.
+                Centralised access for fees, academic updates, institutional
+                resources, and administrative information for students and
+                parents across the ERAM ecosystem.
               </p>
               <button className="cursor-pointer inline-flex items-center gap-2 px-6 py-3 bg-[#ae1431] text-white text-sm font-rethink uppercase tracking-wide rounded-xl hover:bg-red-800 active:scale-95 transition-all">
                 Proceed to Full Portal <ChevronRight size={18} />
@@ -156,15 +320,36 @@ const StudentParentPortal = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-6">
               {[
-                { icon: <CreditCard size={20} />, title: "Secure Online Fee Payment", desc: "Safe and encrypted payment gateway" },
-                { icon: <Receipt size={20} />, title: "Receipt & Invoice Download", desc: "Instant digital receipts for all payments" },
-                { icon: <History size={20} />, title: "Payment History Access", desc: "Complete transaction records" },
+                {
+                  icon: <CreditCard size={20} />,
+                  title: "Secure Online Fee Payment",
+                  desc: "Safe and encrypted payment gateway",
+                },
+                {
+                  icon: <Receipt size={20} />,
+                  title: "Receipt & Invoice Download",
+                  desc: "Instant digital receipts for all payments",
+                },
+                {
+                  icon: <History size={20} />,
+                  title: "Payment History Access",
+                  desc: "Complete transaction records",
+                },
               ].map((item, i) => (
-                <div key={i} className="flex items-start gap-3 bg-white/50 rounded-xl p-4">
-                  <div className="mt-0.5 text-red-700 shrink-0">{item.icon}</div>
+                <div
+                  key={i}
+                  className="flex items-start gap-3 bg-white/50 rounded-xl p-4"
+                >
+                  <div className="mt-0.5 text-red-700 shrink-0">
+                    {item.icon}
+                  </div>
                   <div>
-                    <p className="font-display text-gray-900 text-sm">{item.title}</p>
-                    <p className="text-gray-600 font-rethink text-xs mt-0.5">{item.desc}</p>
+                    <p className="font-display text-gray-900 text-sm">
+                      {item.title}
+                    </p>
+                    <p className="text-gray-600 font-rethink text-xs mt-0.5">
+                      {item.desc}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -180,26 +365,26 @@ const StudentParentPortal = () => {
       {/* ── Institution Selection + Notices ── */}
       <section className="pb-8 sm:pb-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-           <p className="text-gray-500 text-2xl font-rethink mb-6">Select Your Institution</p>
-         <br/>
-
+          <p className="text-gray-500 text-3xl font-rethink text-center mb-6">
+            Select Your Institution
+          </p>
           {/* Tab strip */}
-          <div className="flex gap-2 sm:gap-10 mb-8 overflow-x-auto pb-1 scrollbar-hide">
+          <div className="flex w-full border-b mb-[30px] border-gray-200 overflow-x-auto scrollbar-hide">
             {institutions.map((inst) => (
               <button
                 key={inst.id}
                 onClick={() => setSelectedInstitution(inst.id)}
-                className={`px-4 sm:px-5 py-2 text-sm font-display whitespace-nowrap border-2 rounded-lg transition-all cursor-pointer shrink-0 ${
-                 selectedInstitution === inst.id
-  ? "bg-[#ae1431] text-white border-red-700 shadow-sm font-rethink"
-                    : "bg-white text-gray-800 border-gray-300 hover:border-red-600 hover:text-red-700"
+                className={`flex-1 py-2.5 text-[20px] whitespace-nowrap text-center transition-all cursor-pointer -mb-px border-b-2 ${
+                  selectedInstitution === inst.id
+                    ? "border-[#ae1431] text-[#ae1431] font-medium"
+                    : "border-transparent text-gray-500 hover:text-gray-800"
                 }`}
               >
                 {inst.name}
               </button>
             ))}
           </div>
-
+          <br />
           {/* Notices */}
           <h3 className="text-xl sm:text-2xl font-display text-gray-900 mb-1">
             Institutional Notices &amp; Updates
@@ -219,7 +404,8 @@ const StudentParentPortal = () => {
               >
                 <span
                   className={`text-xs font-semibold px-2.5 py-1 rounded-full ${
-                    categoryColors[notice.category] || "bg-gray-100 text-gray-700"
+                    categoryColors[notice.category] ||
+                    "bg-gray-100 text-gray-700"
                   }`}
                 >
                   {notice.category}
@@ -248,7 +434,10 @@ const StudentParentPortal = () => {
 
           {/* Search */}
           <div className="relative mb-2">
-            <Search className="absolute left-3.5 top-3.5 text-gray-400" size={18} />
+            <Search
+              className="absolute left-3.5 top-3.5 text-gray-400"
+              size={18}
+            />
             <input
               type="text"
               placeholder="Search study materials, question papers, assignments..."
@@ -282,7 +471,9 @@ const StudentParentPortal = () => {
                       <span className="bg-gray-100 text-gray-600 text-xs px-2.5 py-0.5 rounded-md font-rethink">
                         {resource.type}
                       </span>
-                      <span className="text-xs text-gray-400">{resource.size}</span>
+                      <span className="text-xs text-gray-400">
+                        {resource.size}
+                      </span>
                     </div>
                   </div>
 
@@ -294,15 +485,20 @@ const StudentParentPortal = () => {
             ) : (
               <div className="text-center py-14 bg-white border border-gray-200 rounded-xl">
                 <Search size={40} className="mx-auto text-gray-300 mb-3" />
-                <p className="text-gray-600 font-rethink text-sm">No resources found</p>
-                <p className="text-gray-400 font-rethink mt-1">Try a different search term</p>
+                <p className="text-gray-600 font-rethink text-sm">
+                  No resources found
+                </p>
+                <p className="text-gray-400 font-rethink mt-1">
+                  Try a different search term
+                </p>
               </div>
             )}
           </div>
 
           {filteredResources.length > 0 && (
             <p className="text-center text-xs text-gray-400 mt-5">
-              Showing {filteredResources.length} resource{filteredResources.length !== 1 ? "s" : ""}
+              Showing {filteredResources.length} resource
+              {filteredResources.length !== 1 ? "s" : ""}
             </p>
           )}
         </div>
@@ -315,7 +511,8 @@ const StudentParentPortal = () => {
             Ready to Get Started?
           </h2>
           <p className="text-black font-rethink sm:text-lg mb-7 max-w-xl mx-auto">
-            Access complete portal features for enhanced learning and communication.
+            Access complete portal features for enhanced learning and
+            communication.
           </p>
           <button className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#ae1431] text-white text-sm font-rethink uppercase tracking-wide rounded-xl  cursor-pointer">
             Launch Full Portal <ChevronRight size={20} />

@@ -236,7 +236,7 @@ function SystemsThatSustainExcellence() {
                 className="systems-eyebrow-line-left h-px bg-black/30 w-10"
                 style={{ transformOrigin: "left center" }}
               />
-              <span className="font-rethink text-[11px] uppercase tracking-[0.2em] text-[#F5EFE8] font-medium">
+              <span className="font-rethink text-[13px] uppercase tracking-[0.2em] text-[#F5EFE8] font-medium">
                 Academic Systems
               </span>
               <div
