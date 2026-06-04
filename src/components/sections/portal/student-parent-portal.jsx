@@ -365,25 +365,28 @@ const StudentParentPortal = () => {
       {/* ── Institution Selection + Notices ── */}
       <section className="pb-8 sm:pb-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <p className="text-gray-500 text-3xl font-rethink text-center mb-6">
+          <p className="text-gray-500 text-2xl font-rethink text-center mb-6">
             Select Your Institution
           </p>
           {/* Tab strip */}
-          <div className="flex w-full border-b mb-[30px] border-gray-200 overflow-x-auto scrollbar-hide">
-            {institutions.map((inst) => (
-              <button
-                key={inst.id}
-                onClick={() => setSelectedInstitution(inst.id)}
-                className={`flex-1 py-2.5 text-[20px] whitespace-nowrap text-center transition-all cursor-pointer -mb-px border-b-2 ${
-                  selectedInstitution === inst.id
-                    ? "border-[#ae1431] text-[#ae1431] font-medium"
-                    : "border-transparent text-gray-500 hover:text-gray-800"
-                }`}
-              >
-                {inst.name}
-              </button>
-            ))}
-          </div>
+        <div className="flex w-full border-b-[0.5px] border-gray-200 overflow-x-auto scrollbar-hide mb-[30px]">
+  {institutions.map((inst) => (
+    <button
+      key={inst.id}
+      onClick={() => setSelectedInstitution(inst.id)}
+      className={`relative flex-1 py-2.5 text-[20px] whitespace-nowrap text-center 
+        cursor-pointer transition-colors bg-transparent border-none
+        after:absolute after:bottom-[-0.9px] after:left-0 after:right-0 
+        after:h-[3.5px] after:rounded-t-sm after:transition-colors
+        ${selectedInstitution === inst.id
+          ? "text-[#ae1431] font-medium after:bg-[#ae1431]"
+          : "text-gray-500 hover:text-gray-800 after:bg-transparent"
+        }`}
+    >
+      {inst.name}
+    </button>
+  ))}
+</div>
           <br />
           {/* Notices */}
           <h3 className="text-xl sm:text-2xl font-display text-gray-900 mb-1">
@@ -505,7 +508,7 @@ const StudentParentPortal = () => {
       </section>
 
       {/* ── CTA ── */}
-      <section className="bg-[#F5EFE8] py-12 sm:py-14">
+      <section className="bg-[#F5EFE8] pb-16 pb-8 sm:pb-20 sm:pb-10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-2xl sm:text-4xl font-display text-black mb-3">
             Ready to Get Started?
